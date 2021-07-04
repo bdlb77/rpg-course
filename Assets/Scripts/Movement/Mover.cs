@@ -12,14 +12,16 @@ namespace RPG.Movement
         // last Ray that was shot at the screen
 
         NavMeshAgent navMeshAgent;
-
+        Health health;
         private void Start()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
+            health = GetComponent<Health>();
         }
 
         private void Update()
         {
+            navMeshAgent.enabled = !health.IsDead();
 
             UpdateAnimator();
         }
