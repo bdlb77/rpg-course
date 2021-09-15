@@ -29,6 +29,7 @@ namespace RPG.Combat
         public void Cancel()
         {
             StopAttack();
+            mover.Cancel();
             target = null;
         }
 
@@ -51,7 +52,8 @@ namespace RPG.Combat
 
             if (!GetIsInRage())
             {
-                mover.MoveTo(target.transform.position);
+                // 1f for full speed in fighting mode
+                mover.MoveTo(target.transform.position, 1f);
             }
             else
             {

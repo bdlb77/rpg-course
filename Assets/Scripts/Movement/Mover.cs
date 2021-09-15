@@ -2,13 +2,15 @@
 using UnityEngine;
 using UnityEngine.AI;
 using RPG.Core;
+using RPG.Saving;
 
 namespace RPG.Movement
 {
 
-    public class Mover : MonoBehaviour, IAction
+    public class Mover : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField] Transform target;
+        [SerializeField] float maxSpeed = 6f;
         // last Ray that was shot at the screen
 
         NavMeshAgent navMeshAgent;
@@ -31,17 +33,18 @@ namespace RPG.Movement
             navMeshAgent.isStopped = true;
         }
 
-        public void MoveTo(Vector3 destination)
+        public void MoveTo(Vector3 destination, float speedFraction)
         {
             navMeshAgent.destination = destination;
+            navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
             navMeshAgent.isStopped = false;
 
         }
 
-        public void StartMoveAction(Vector3 destination)
+        public void StartMoveAction(Vector3 destination, float speedFraction)
         {
             GetComponent<ActionScheduler>().StartAction(this);
-            MoveTo(destination);
+            MoveTo(destination, speedFraction);
 
         }
 
@@ -54,6 +57,24 @@ namespace RPG.Movement
             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
             float speed = localVelocity.z;
             GetComponent<Animator>().SetFloat("forwardSpeed", speed);
+        }
+
+        public object CaptureState()
+        {
+            // we want to capture position for state (For saving). Must Serialize Vector3 as Class with instance variables for x,y,z
+            return new SerializableVector3(transform.position);
+        }
+
+        public void RestoreState(object state)
+        {
+            // assume same object we return in `CaptureSave()` is exactly same object we will use as our argument in `RestoreState()`
+            // Cast SerializeableVector3 
+            SerializableVector3 savedPosition = (SerializableVector3)state;
+
+            // sometimes weird conditions with NavMeshAgent. Stops NavMeshAgent from meddling with our position
+            GetComponent<NavMeshAgent>().enabled = false;
+            transform.position = savedPosition.ToVector(); 
+            GetComponent<NavMeshAgent>().enabled = true;
         }
     }
 }

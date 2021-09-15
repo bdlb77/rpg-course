@@ -1,18 +1,20 @@
 using UnityEngine;
-
+using RPG.Saving;
 
 namespace RPG.Core
 {
-    public class Health : MonoBehaviour
+    public class Health : MonoBehaviour, ISaveable
     {
         [SerializeField] float health = 100f;
 
         bool isDead = false;
-       
+
+
         public bool IsDead()
         {
             return isDead;
         }
+
         public void TakeDamage(float damage)
         {
             // take highest # between health - dmg || 0
@@ -24,7 +26,23 @@ namespace RPG.Core
             }
         }
 
-        private void Die()
+        public object CaptureState()
+        {
+            // return serializable object
+            return health;
+        }
+
+
+        public void RestoreState(object state)
+        {
+            float savedHealth = (float)state;
+           
+            health = savedHealth;
+            
+            if (health == 0) Die();
+        }
+
+        void Die()
         {
             if (isDead) return;
 

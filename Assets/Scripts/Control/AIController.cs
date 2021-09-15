@@ -10,6 +10,12 @@ namespace RPG.Control
     {
         [SerializeField] float chaseDistance = 5f;
         [SerializeField] float suspicionTime = 5f; // 3 second!
+        [SerializeField] PatrolPath patrolPath;
+        [SerializeField] float wpPromixityTolerance = 1f;
+        [SerializeField] float waypointDwellTime = 1.5f;
+        
+        [Range(0,1)]
+        [SerializeField] float patrolSpeedFraction = 0.2f;
         Fighter fighter;
         GameObject player;
 
@@ -20,6 +26,8 @@ namespace RPG.Control
         Vector3 guardPosition;
         // Guard memory! Infinity since the time initially should be really high!  SO when check and updating. .it will always be lower on Initial LOS of player
         float timeSinceLastSawPlayer = Mathf.Infinity;
+        float timeSinceAtWaypoint = Mathf.Infinity;
+        int currrentWayPointIdx = 0;
         private void Start()
         {
             fighter = GetComponent<Fighter>();
@@ -35,8 +43,6 @@ namespace RPG.Control
 
             if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
             {
-                // reset time since last saw back to 0;
-                timeSinceLastSawPlayer = 0;
                 AttackBehaviour();
 
             }
@@ -47,15 +53,51 @@ namespace RPG.Control
             }
             else
             {
-                GuardBehaviour();
+                PatrolBehaviour();
 
             }
-            timeSinceLastSawPlayer += Time.deltaTime;
+            UpdateTimers();
         }
 
-        private void GuardBehaviour()
+        private void UpdateTimers()
         {
-            mover.StartMoveAction(guardPosition);
+            timeSinceLastSawPlayer += Time.deltaTime;
+            timeSinceAtWaypoint += Time.deltaTime;
+        }
+
+        private void PatrolBehaviour()
+        {
+            Vector3 nextPosition = guardPosition; // default;
+            
+            if (patrolPath != null)
+            {
+                if (AtWayPoint())
+                {
+                    timeSinceAtWaypoint = 0;
+                    CycleWayPoint();
+                }
+                nextPosition = GetCurrentWayPoint();
+            }
+            if (timeSinceAtWaypoint > waypointDwellTime)
+            {
+                mover.StartMoveAction(nextPosition, patrolSpeedFraction);
+            }
+        }
+
+        private bool AtWayPoint()
+        {
+            float distanceToWaypoint = Vector3.Distance(transform.position, GetCurrentWayPoint());
+            return distanceToWaypoint < wpPromixityTolerance;
+        }
+
+        private void CycleWayPoint()
+        {
+            // update to next index
+            currrentWayPointIdx = patrolPath.GetNextIndex(currrentWayPointIdx);
+        }
+        private Vector3 GetCurrentWayPoint()
+        {
+            return patrolPath.GetWayPoint(currrentWayPointIdx);
         }
 
         private void SuspicionBehaviour()
@@ -65,6 +107,8 @@ namespace RPG.Control
 
         private void AttackBehaviour()
         {
+            // reset time since last saw back to 0;
+            timeSinceLastSawPlayer = 0;
             fighter.Attack(player);
         }
 
