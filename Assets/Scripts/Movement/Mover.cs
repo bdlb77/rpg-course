@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using RPG.Core;
 using RPG.Saving;
+using System.Collections.Generic;
 
 namespace RPG.Movement
 {
@@ -59,21 +60,28 @@ namespace RPG.Movement
             GetComponent<Animator>().SetFloat("forwardSpeed", speed);
         }
 
+        [System.Serializable]
+        struct MoverSaveData
+        {
+            public SerializableVector3 position;
+            public SerializableVector3 rotation;
+        }
+
         public object CaptureState()
         {
-            // we want to capture position for state (For saving). Must Serialize Vector3 as Class with instance variables for x,y,z
-            return new SerializableVector3(transform.position);
+            MoverSaveData data = new MoverSaveData();
+            data.position = new SerializableVector3(transform.position);
+            data.rotation =  new SerializableVector3(transform.eulerAngles);
+            return data;
+
         }
 
         public void RestoreState(object state)
         {
-            // assume same object we return in `CaptureSave()` is exactly same object we will use as our argument in `RestoreState()`
-            // Cast SerializeableVector3 
-            SerializableVector3 savedPosition = (SerializableVector3)state;
-
-            // sometimes weird conditions with NavMeshAgent. Stops NavMeshAgent from meddling with our position
+            MoverSaveData data = (MoverSaveData)state;
             GetComponent<NavMeshAgent>().enabled = false;
-            transform.position = savedPosition.ToVector(); 
+            transform.position = data.position.ToVector();
+            transform.eulerAngles = data.rotation.ToVector();
             GetComponent<NavMeshAgent>().enabled = true;
         }
     }
