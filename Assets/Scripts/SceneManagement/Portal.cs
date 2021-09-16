@@ -39,8 +39,16 @@ namespace RPG.SceneManagement
             // fade out in series of frames.. Load Scene.. Then wait secs for series of Frames.. Then Fade in over Series of Frames 
             yield return fader.FadeOut(fadeOutTime);
 
+            // save current Level
+            SavingWrapper wrapper = FindObjectOfType<SavingWrapper>();
+
+            wrapper.Save();
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
             
+
+            // Load current Level
+            wrapper.Load();
+
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
 
@@ -66,7 +74,9 @@ namespace RPG.SceneManagement
 
         private void UpdatePlayer(Portal otherPortal)
         {
+
             GameObject player = GameObject.FindWithTag("Player");
+            // without Warp, you can Disable and enable NavMeshAgent when setting the transform position of player
             player.GetComponent<NavMeshAgent>().Warp(otherPortal.spawnPoint.position);
             player.transform.rotation = otherPortal.spawnPoint.rotation;
             
