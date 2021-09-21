@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponPickup : MonoBehaviour
+namespace RPG.Combat
 {
-    // Start is called before the first frame update
-    void Start()
+    public class WeaponPickup : MonoBehaviour
     {
-        
-    }
+        [SerializeField] Weapon weapon = null;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void OnTriggerEnter(Collider other) 
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                other.GetComponent<Fighter>().EquipWeapon(weapon);
+                // Destroy this Weapon Pickup Instance
+                Destroy(gameObject);
+
+            }    
+        }
     }
 }
