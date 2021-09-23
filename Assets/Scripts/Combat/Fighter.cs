@@ -15,14 +15,14 @@ namespace RPG.Combat
         float timeSinceLastAttack = Mathf.Infinity;
         Weapon currentWeapon = null;
         Mover mover;
-    
+
 
         private void Start()
         {
             mover = GetComponent<Mover>();
             EquipWeapon(defaultWeapon);
         }
-        
+
         private void Update()
         {
             // time it took last frame to render.. Add this delta each time to var
@@ -102,12 +102,25 @@ namespace RPG.Combat
         private void Hit()
         {
             if (target == null) return;
+            if (currentWeapon.HasProjectile())
+            {
+                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
+            }
+            else
+            {
+                // target is set in Attack() which is called in PlayerController 
+                // target here is Health
+                target.TakeDamage(currentWeapon.GetDamage());
 
-            // target is set in Attack() which is called in PlayerController 
-            // target here is Health
+            }
 
-            target.TakeDamage(currentWeapon.GetDamage());
 
+        }
+
+        // Animation Event
+        private void Shoot()
+        {
+            Hit();
         }
 
         public bool CanAttack(GameObject combatTarget)
