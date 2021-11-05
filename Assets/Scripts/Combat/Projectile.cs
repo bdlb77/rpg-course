@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] float speed = 1f;
     [SerializeField] bool isHoming = false;
+    [SerializeField] GameObject hitEffect = null;
     Health target = null;
     float damage = 0;
 
@@ -43,11 +44,16 @@ public class Projectile : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        print("Here!!!");
         if (other.GetComponent<Health>() != target) return;
         if (target.IsDead()) return; // if enemy is dead.. Don't do damage
         print(damage);
         target.TakeDamage(damage);
+
+        if (hitEffect != null)
+        {
+
+            Instantiate(hitEffect, GetAimLocation(), transform.rotation);gameObject
+        }
         Destroy(gameObject);
     }
 
