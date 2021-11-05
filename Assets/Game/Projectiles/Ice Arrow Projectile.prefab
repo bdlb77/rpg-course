@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ice Arrow Projectile
       objectReference: {fileID: 0}
+    - target: {fileID: 4800035904685460850, guid: 1fe182e0b0aa5c84a9b5f01ebef0963c, type: 3}
+      propertyPath: isHoming
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4804577868058278577, guid: 1fe182e0b0aa5c84a9b5f01ebef0963c, type: 3}
       propertyPath: m_Parameters.colorGradient.atime0
       value: 0

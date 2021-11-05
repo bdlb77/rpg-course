@@ -7,14 +7,22 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float speed = 1f;
+    [SerializeField] bool isHoming = false;
     Health target = null;
     float damage = 0;
 
+    void Start()
+    {
+        transform.LookAt(GetAimLocation());
+
+    }
     void Update()
     {
         if (target == null) return;
-
-        transform.LookAt(GetAimLocation());
+        if (isHoming && !target.IsDead()) // make sure homing missiles don't stick around to look at. 
+        {
+            transform.LookAt(GetAimLocation());
+        }
         // transition delta and move at speed.. flowing at the correct frame rate. (make frame independent)
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
@@ -37,6 +45,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         print("Here!!!");
         if (other.GetComponent<Health>() != target) return;
+        if (target.IsDead()) return; // if enemy is dead.. Don't do damage
         print(damage);
         target.TakeDamage(damage);
         Destroy(gameObject);
