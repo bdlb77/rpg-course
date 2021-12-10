@@ -52,7 +52,7 @@ public class Projectile : MonoBehaviour
         if (hitEffect != null)
         {
 
-            Instantiate(hitEffect, GetAimLocation(), transform.rotation);gameObject
+            Instantiate(hitEffect, GetAimLocation(), transform.rotation);
         }
         Destroy(gameObject);
     }
