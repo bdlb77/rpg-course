@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyAfterEffect : MonoBehaviour
+namespace RPG.Core
 {
-
-    // Update is called once per frame
-    void Update()
+    public class DestroyAfterEffect : MonoBehaviour
     {
-        if (!GetComponent<ParticleSystem>().IsAlive())
+        void Update()
         {
-            Destroy(gameObject);
+            // if particle system no longer producing particles
+            if (!GetComponent<ParticleSystem>().IsAlive())
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
