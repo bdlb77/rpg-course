@@ -25,8 +25,16 @@ namespace RPG.Combat
                 GameObject weapon = Instantiate(equippedPrefab, handTransform);
                 weapon.name = weaponName;
             }
+
+            var overrideController = animator.runtimeAnimatorController as AnimatorOverrideController;
             if (animatorOverride != null) {
                 animator.runtimeAnimatorController = animatorOverride;
+            }
+            else if (overrideController != null)
+            {
+                // so.. will be "null" if animator is the ROOT Animator Controller.. Else it will be override Animator .
+                // E.g., override = Fireball Animator.. Root = Punch. If overide is null.. cast to override won't work and overrideController will default to Root.
+                animator.runtimeAnimatorController = overrideController.runtimeAnimatorController;
             }
         }
 

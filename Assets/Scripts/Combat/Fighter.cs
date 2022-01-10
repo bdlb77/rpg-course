@@ -1,11 +1,12 @@
 using RPG.Movement;
 using UnityEngine;
 using RPG.Core;
+using RPG.Saving;
 using System;
 
 namespace RPG.Combat
 {
-    public class Fighter : MonoBehaviour, IAction
+    public class Fighter : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField] float timeBetweenAttacks = 1.1f;
         [SerializeField] Transform leftHandTransform = null;
@@ -20,7 +21,10 @@ namespace RPG.Combat
         private void Start()
         {
             mover = GetComponent<Mover>();
-            EquipWeapon(defaultWeapon);
+            if (currentWeapon == null)
+            {
+                EquipWeapon(defaultWeapon);
+            }
         }
 
         private void Update()
@@ -131,6 +135,18 @@ namespace RPG.Combat
             // If the target has a health component && is not Dead
             Health targetHealth = combatTarget.GetComponent<Health>();
             return targetHealth != null && !targetHealth.IsDead();
+        }
+
+        public object CaptureState()
+        {
+            return currentWeapon.name;
+        }
+
+        public void RestoreState(object state)
+        {
+            string weaponName = (string)state;
+            Weapon weapon = Resources.Load<Weapon>(weaponName);
+            EquipWeapon(weapon);
         }
     }
 }
