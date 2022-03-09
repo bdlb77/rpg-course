@@ -28,6 +28,12 @@ namespace RPG.Attributes
             }
         }
 
+        public float GetPercentage()
+        {
+            float maxHealth = GetComponent<BaseStats>().GetHealth();
+            return 100 * healthPoints / maxHealth;
+            
+        } 
         public object CaptureState()
         {
             // return serializable object
