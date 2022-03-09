@@ -11,15 +11,10 @@ namespace RPG.Stats
         [SerializeField] CharacterClass characterClass;
         // Start is called before the first frame update
         [SerializeField] Progression progression = null;
-        void Start()
+
+        public float GetHealth()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            return progression.GetHealth(characterClass, startinglevel);
         }
     }
 

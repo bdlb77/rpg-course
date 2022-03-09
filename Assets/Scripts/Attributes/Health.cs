@@ -1,11 +1,13 @@
 using UnityEngine;
 using RPG.Saving;
+using RPG.Core;
+using RPG.Stats;
 
-namespace RPG.Core
+namespace RPG.Attributes
 {
     public class Health : MonoBehaviour, ISaveable
     {
-        [SerializeField] float health = 100f;
+        [SerializeField] float healthPoints = 100f;
 
         bool isDead = false;
 
@@ -18,9 +20,9 @@ namespace RPG.Core
         public void TakeDamage(float damage)
         {
             // take highest # between health - dmg || 0
-            health = Mathf.Max(health - damage, 0);
-            print(health);
-            if (health == 0)
+            healthPoints = Mathf.Max(healthPoints - damage, 0);
+            print(healthPoints);
+            if (healthPoints == 0)
             {
                 Die();
             }
@@ -29,7 +31,7 @@ namespace RPG.Core
         public object CaptureState()
         {
             // return serializable object
-            return health;
+            return healthPoints;
         }
 
 
@@ -37,9 +39,9 @@ namespace RPG.Core
         {
             float savedHealth = (float)state;
            
-            health = savedHealth;
+            healthPoints = savedHealth;
             
-            if (health == 0) Die();
+            if (healthPoints == 0) Die();
         }
 
         void Die()
@@ -50,6 +52,11 @@ namespace RPG.Core
             // Cancel Current Action since dead
             GetComponent<ActionScheduler>().CancelCurrentAction();
             isDead = true;
+        }
+        private void Start()
+        {
+            // get health from Base Stats and Progression.
+            healthPoints = GetComponent<BaseStats>().GetHealth();
         }
     }
 }
