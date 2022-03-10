@@ -13,24 +13,63 @@ MonoBehaviour:
   m_Name: Progression
   m_EditorClassIdentifier: 
   progressionCharacterClasses:
-  - characterClass: 0
-    health:
-    - 50
-    - 250
-    - 500
-    - 750
-  - characterClass: 1
-    health:
-    - 5
-    - 15
-    - 40
-    - 80
-    - 120
-    - 150
-  - characterClass: 2
-    health:
-    - 5
-    - 10
-    - 20
-    - 40
-    - 60
+  - characterClass: 0 # Player
+    stats:
+      - stat: 0 # Health
+        levels:
+          - 50
+          - 100
+          - 200
+          - 400
+          - 800
+      - stat: 1 # Experience Reward
+        levels:
+  - characterClass: 1 # Grunt
+    stats:
+      - stat: 0 # Health
+        levels:
+          - 15
+          - 25
+          - 45
+          - 85
+          - 165
+      - stat: 1 # Experience Reward
+        levels:
+          - 10
+          - 15
+          - 30
+          - 50
+          - 80
+  - characterClass: 2 # Archer
+    stats:
+      - stat: 0 # Health
+        levels:
+          - 10
+          - 20
+          - 40
+          - 75
+          - 100
+      - stat: 1 # Experience Reward
+        levels:
+          - 15
+          - 25
+          - 40
+          - 60
+          - 100
+  - characterClass: 3 # Boss
+    stats:
+      - stat: 0 # Health
+        levels:
+          - 150
+          - 300
+          - 500
+          - 750
+          - 1000
+      - stat: 1 # Experience Reward
+        levels:
+          - 50
+          - 100
+          - 170
+          - 250
+          - 400
+

@@ -55,11 +55,11 @@ namespace RPG.Combat
             return projectile != null;
         }
 
-        public void LaunchProjectile(Transform righthand, Transform leftHand, Health target)
+        public void LaunchProjectile(Transform righthand, Transform leftHand, Health target, GameObject instigator)
         {
             // Quaternion.identity = orientation (rotation E.g.) of object in world
-            Projectile projectileIsntance = Instantiate(projectile, GetTransform(righthand, leftHand).position, Quaternion.identity);
-            projectileIsntance.SetTarget(target, weaponDamage);
+            Projectile projectileInstance = Instantiate(projectile, GetTransform(righthand, leftHand).position, Quaternion.identity);
+            projectileInstance.SetTarget(target, instigator, weaponDamage);
         }
         public float GetDamage() {
             return weaponDamage;
