@@ -7,16 +7,21 @@ namespace RPG.Stats
     {
         [SerializeField] ProgressionCharacterClass[] progressionCharacterClasses = null;
 
-        public float GetHealth(CharacterClass characterClass, int level)
+        public float GetStat(Stat stat, CharacterClass characterClass, int level)
         {
             // get Correct Health From Correct CharacterClass from Corect Level
             foreach (ProgressionCharacterClass progCharClass in progressionCharacterClasses)
             {
-                if (progCharClass.characterClass == characterClass)
+                if (progCharClass.characterClass != characterClass) continue;
+
+                foreach(ProgressionStat progressionStat in progCharClass.stats)
                 {
-                    // level - 1 for index
-                    return progCharClass.health[level - 1];
+                    if (progressionStat.stat != stat) continue;
+                    if (progressionStat.levels.Length < level) continue; // if level we are searching for is out of bounds of len(levels)
+
+                    return progressionStat.levels[level - 1];
                 }
+               
             }
             return 0;
         }

@@ -51,11 +51,11 @@ MonoBehaviour:
           - 100
       - stat: 1 # Experience Reward
         levels:
-          - 15
-          - 25
+          - 20
           - 40
           - 60
-          - 100
+          - 120
+          - 150
   - characterClass: 3 # Boss
     stats:
       - stat: 0 # Health
