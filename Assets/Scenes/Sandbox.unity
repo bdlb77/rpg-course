@@ -4552,7 +4552,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987039907}
-  m_LocalRotation: {x: 0.1571317, y: 0.47142914, z: -0.085782066, w: 0.8635425}
+  m_LocalRotation: {x: 0.15713169, y: 0.4714291, z: -0.08578206, w: 0.8635425}
   m_LocalPosition: {x: -25.107687, y: -5.400546, z: 42.734055}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4639,7 +4639,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988946054}
-  m_LocalRotation: {x: 0.032941993, y: 0.9465234, z: -0.30413404, w: 0.1025218}
+  m_LocalRotation: {x: 0.03294199, y: 0.9465234, z: -0.30413407, w: 0.10252177}
   m_LocalPosition: {x: -36.53769, y: -1.9005461, z: 67.624054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5456,5 +5456,6 @@ PrefabInstance:
       propertyPath: defaultWeaponName
       value: Sword
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5629514204857670118, guid: a3d181620330ada44ae0d9c3f6b658e4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a3d181620330ada44ae0d9c3f6b658e4, type: 3}
