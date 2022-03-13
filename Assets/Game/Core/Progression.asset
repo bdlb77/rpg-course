@@ -22,8 +22,13 @@ MonoBehaviour:
           - 200
           - 400
           - 800
-      - stat: 1 # Experience Reward
+      - stat: 2 # Experience Reward
         levels:
+          - 20
+          - 40
+          - 80
+          - 160
+          - 320
   - characterClass: 1 # Grunt
     stats:
       - stat: 0 # Health
