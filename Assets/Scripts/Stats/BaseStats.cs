@@ -1,30 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 namespace RPG.Stats
 {
     public class BaseStats : MonoBehaviour
     {
-        [Range(1,99)]
+        [Range(1, 99)]
         [SerializeField] int startinglevel = 1;
         [SerializeField] CharacterClass characterClass;
         // Start is called before the first frame update
         [SerializeField] Progression progression = null;
-
+        [SerializeField] GameObject levelUpParticleEffect = null;
         int currentLevel = 0;
 
-        private void Start() {
+        public event Action onLevelUp;
+        private void Start()
+        {
             currentLevel = CalculateLevel();
+            Experience experience = GetComponent<Experience>();
+            if (experience != null)
+            {
+                experience.onExperienceGained += UpdateLevel;
+            }
         }
-        private void Update() {
+        private void UpdateLevel()
+        {
             int newLevel = CalculateLevel();
             if (newLevel > currentLevel)
             {
                 currentLevel = newLevel;
-                print("Leveled Up!");
+                LevelUpEffect();
+                onLevelUp(); 
             }
         }
+
+        private void LevelUpEffect()
+        {
+            // set off of transform of parent(Player)
+            Instantiate(levelUpParticleEffect, transform);
+        }
+
         public float GetStat(Stat stat)
         {
             return progression.GetStat(stat, characterClass, GetLevel());
@@ -32,6 +47,11 @@ namespace RPG.Stats
 
         public int GetLevel()
         {
+            // Health.Start may run before baseStats.Start.. Meaning Race condition on currentLevel being Evaluated.
+            // So we check if level has not been calculated (if still 0), and then calculate it.
+            if (currentLevel < 1) {
+                currentLevel = CalculateLevel();
+            }
             return currentLevel;
         }
         public int CalculateLevel()

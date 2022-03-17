@@ -2,23 +2,30 @@ using UnityEngine;
 using RPG.Saving;
 using RPG.Core;
 using RPG.Stats;
+using System;
 
 namespace RPG.Attributes
 {
     public class Health : MonoBehaviour, ISaveable
     {
-         float healthPoints = -1f;
+        [SerializeField] float regenerationPercentage = 70f;
+        float healthPoints = -1f;
 
         bool isDead = false;
 
 
         private void Start()
         {
-            if (healthPoints < 0) {
+            // If starting.. then hp = -1.. Meaning it's a situation that will not happen in game... therefore the beginning
+            GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
+            if (healthPoints < 0)
+            {
                 // get health from Base Stats and Progression.
                 healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
             }
         }
+
+
         public bool IsDead()
         {
             return isDead;
@@ -40,8 +47,8 @@ namespace RPG.Attributes
         {
             float maxHealth = GetComponent<BaseStats>().GetStat(Stat.Health);
             return 100 * healthPoints / maxHealth;
-            
-        } 
+
+        }
         public object CaptureState()
         {
             // return serializable object
@@ -51,9 +58,9 @@ namespace RPG.Attributes
         public void RestoreState(object state)
         {
             float savedHealth = (float)state;
-           
+
             healthPoints = savedHealth;
-            
+
             if (healthPoints == 0) Die();
         }
 
@@ -76,6 +83,12 @@ namespace RPG.Attributes
 
             experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
 
+        }
+        private void RegenerateHealth()
+        {
+            float regenHealthPoints = GetComponent<BaseStats>().GetStat(Stat.Health) * (regenerationPercentage / 100);
+            // Regen either to healthPoints OR 70% of new level's points.
+            healthPoints = Mathf.Max(healthPoints, regenHealthPoints);
         }
     }
 }
