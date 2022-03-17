@@ -4,10 +4,11 @@ using RPG.Core;
 using RPG.Saving;
 using RPG.Attributes;
 using RPG.Stats;
+using System.Collections.Generic;
 
 namespace RPG.Combat
 {
-    public class Fighter : MonoBehaviour, IAction, ISaveable
+    public class Fighter : MonoBehaviour, IAction, ISaveable, IModifierProvider
     {
         [SerializeField] float timeBetweenAttacks = 1.1f;
         [SerializeField] Transform leftHandTransform = null;
@@ -134,6 +135,13 @@ namespace RPG.Combat
             Hit();
         }
 
+        public IEnumerable<float> GetAdditiveModifier(Stat stat)
+        {
+           if (stat == Stat.Damage)
+           {
+               yield return currentWeapon.GetDamage();
+           }
+        }
         public bool CanAttack(GameObject combatTarget)
         {
             // If clicking not on a target
@@ -155,5 +163,7 @@ namespace RPG.Combat
             Weapon weapon = Resources.Load<Weapon>(weaponName);
             EquipWeapon(weapon);
         }
+
+
     }
 }

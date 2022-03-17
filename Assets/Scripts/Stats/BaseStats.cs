@@ -30,7 +30,8 @@ namespace RPG.Stats
             {
                 currentLevel = newLevel;
                 LevelUpEffect();
-                onLevelUp(); 
+                // call on subscribed functions to `onLevelUp`
+                onLevelUp();
             }
         }
 
@@ -42,19 +43,22 @@ namespace RPG.Stats
 
         public float GetStat(Stat stat)
         {
-            return progression.GetStat(stat, characterClass, GetLevel());
+            return progression.GetStat(stat, characterClass, GetLevel()) + GetAdditiveModifier(stat);
         }
+
+
 
         public int GetLevel()
         {
             // Health.Start may run before baseStats.Start.. Meaning Race condition on currentLevel being Evaluated.
             // So we check if level has not been calculated (if still 0), and then calculate it.
-            if (currentLevel < 1) {
+            if (currentLevel < 1)
+            {
                 currentLevel = CalculateLevel();
             }
             return currentLevel;
         }
-        public int CalculateLevel()
+        private int CalculateLevel()
         {
             Experience experience = GetComponent<Experience>();
             if (experience == null) return startinglevel;
@@ -71,6 +75,18 @@ namespace RPG.Stats
             }
             // if no level XP are greater than current leel .. Then must be ultimate level (highest level)
             return penultimateLevel + 1;
+        }
+        private float GetAdditiveModifier(Stat stat)
+        {
+            float total = 0;
+            foreach(IModifierProvider provider in GetComponents<IModifierProvider>())
+            {
+                foreach(float modifier in provider.GetAdditiveModifier(stat))
+                {
+                    total += modifier;
+                }
+            }
+            return total;
         }
     }
 
