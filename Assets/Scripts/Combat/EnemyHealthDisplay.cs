@@ -15,13 +15,16 @@ namespace RPG.Combat
         }
 
         private void Update()
-        { 
-            if (fighter.GetTarget() == null) {
+        {
+            if (fighter.GetTarget() == null)
+            {
                 GetComponent<Text>().text = "N/A";
                 return;
             }
             Health health = fighter.GetTarget();
-            GetComponent<Text>().text = String.Format("{0:0}%", health.GetPercentage());
+            // healthValues[0] == Current , healthValues[1] == max
+            GetComponent<Text>().text = String.Format("{0:0}/{1:0}", health.GetHealthPoints(), health.GetMaxHealthPoints());
+
         }
     }
 

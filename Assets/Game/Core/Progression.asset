@@ -29,6 +29,13 @@ MonoBehaviour:
           - 80
           - 160
           - 320
+      - stat: 3 # Base Damage
+        levels:
+          - 5
+          - 10
+          - 15
+          - 20
+          - 25
   - characterClass: 1 # Grunt
     stats:
       - stat: 0 # Health
@@ -45,6 +52,13 @@ MonoBehaviour:
           - 30
           - 50
           - 80
+      - stat: 3 # Base Damage
+        levels:
+          - 5
+          - 10
+          - 15
+          - 20
+          - 25
   - characterClass: 2 # Archer
     stats:
       - stat: 0 # Health
@@ -61,6 +75,13 @@ MonoBehaviour:
           - 60
           - 120
           - 150
+      - stat: 3 # Base Damage
+        levels:
+          - 5
+          - 10
+          - 15
+          - 20
+          - 25
   - characterClass: 3 # Boss
     stats:
       - stat: 0 # Health
@@ -77,4 +98,11 @@ MonoBehaviour:
           - 170
           - 250
           - 400
+      - stat: 3 # Base Damage
+        levels:
+          - 10
+          - 20
+          - 35
+          - 50
+          - 100
 

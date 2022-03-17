@@ -33,7 +33,8 @@ namespace RPG.Attributes
 
         public void TakeDamage(GameObject instigator, float damage)
         {
-            // take highest # between health - dmg || 0
+            print(gameObject.name + " Took Damage: " + damage);
+
             healthPoints = Mathf.Max(healthPoints - damage, 0);
             print(healthPoints);
             if (healthPoints == 0)
@@ -43,12 +44,16 @@ namespace RPG.Attributes
             }
         }
 
-        public float GetPercentage()
+        public float GetHealthPoints()
         {
-            float maxHealth = GetComponent<BaseStats>().GetStat(Stat.Health);
-            return 100 * healthPoints / maxHealth;
-
+            return healthPoints;
         }
+
+        public float GetMaxHealthPoints()
+        {
+            return GetComponent<BaseStats>().GetStat(Stat.Health);
+        }
+
         public object CaptureState()
         {
             // return serializable object
