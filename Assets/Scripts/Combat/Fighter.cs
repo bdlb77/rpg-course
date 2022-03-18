@@ -67,7 +67,6 @@ namespace RPG.Combat
             GetComponent<ActionScheduler>().StartAction(this);
             // fighter knows if it needs to attack or not
             target = combatTarget.GetComponent<Health>();
-            print("Take that you PEASANT!");
             // move to target
             // stop a x distance
             // attack
@@ -135,12 +134,19 @@ namespace RPG.Combat
             Hit();
         }
 
-        public IEnumerable<float> GetAdditiveModifier(Stat stat)
+        public IEnumerable<float> GetAdditiveModifiers(Stat stat)
         {
            if (stat == Stat.Damage)
            {
                yield return currentWeapon.GetDamage();
            }
+        }
+        public IEnumerable<float> GetPercentageModifiers(Stat stat)
+        {
+            if (stat == Stat.Damage)
+            {
+                yield return currentWeapon.GetWeaponPercentageBonus();
+            }
         }
         public bool CanAttack(GameObject combatTarget)
         {

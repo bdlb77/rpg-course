@@ -10,6 +10,7 @@ namespace RPG.Combat
         [SerializeField] GameObject equippedPrefab = null;
         [SerializeField] Projectile projectile = null;
         [SerializeField] float weaponDamage = 80f;
+        [SerializeField] float weaponPercentageBonus = 0;
         [SerializeField] float weaponRange = 2f; // 2 meters
         [SerializeField] bool isRightHanded = true;
 
@@ -69,6 +70,10 @@ namespace RPG.Combat
             return weaponRange;
         }
 
+        public float GetWeaponPercentageBonus()
+        {
+            return weaponPercentageBonus;
+        }
         Transform GetTransform(Transform rightHand, Transform leftHand)
         {
             return isRightHanded ? rightHand : leftHand;
