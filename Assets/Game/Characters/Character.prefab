@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6686d78215785fe419d91d88052247e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 250
+  regenerationPercentage: 70
 --- !u!136 &6721657615748169818
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -188,8 +188,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 2
+  m_Radius: 0.4
+  m_Height: 2.5
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &5334555689314186924
@@ -236,3 +236,5 @@ MonoBehaviour:
   startinglevel: 1
   characterClass: 1
   progression: {fileID: 11400000, guid: de477eabce4401d40ba18a24b9efe896, type: 2}
+  levelUpParticleEffect: {fileID: 0}
+  shouldUseModifiers: 0
