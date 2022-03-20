@@ -77,22 +77,30 @@ namespace RPG.Control
         // If true, means that Raycast hit something on scene. Else return false (clicking on edge of world)
         {
 
-            Ray ray = GetMouseRay();
-            RaycastHit hit;
-            bool hasHit = Physics.Raycast(ray, out hit);
+            // Ray ray = GetMouseRay();
+            // RaycastHit hit;
+            Vector3 target;
+            bool hasHit = RaycastNavMesh(out target);
+            // bool hasHit = Physics.Raycast(ray, out hit);
             if (hasHit)
             {
                 if (Input.GetMouseButton(0))
                 {
 
                     // 1f means 100% movement speed of MaxSpeed
-                    GetComponent<Mover>().StartMoveAction(hit.point, 1f);
+                    GetComponent<Mover>().StartMoveAction(target, 1f);
                 }
                 SetCursor(CursorType.Movement);
                 return true;
 
             }
             return false;
+        }
+
+        private bool RaycastNavMesh(out Vector3 target)
+        {
+            target =  new Vector3();
+            return true;
         }
         private RaycastHit[] RacycastAllSorted()
         {
