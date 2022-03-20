@@ -36,6 +36,7 @@ namespace RPG.Control
             health = GetComponent<Health>();
             mover = GetComponent<Mover>();
             player = GameObject.FindWithTag("Player");
+            
             guardPosition = new LazyValue<Vector3>(GetGuardPosition);
         }
         private void Start()

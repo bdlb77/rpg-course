@@ -52,7 +52,7 @@ namespace RPG.Attributes
             print(gameObject.name + " Took Damage: " + damage);
 
             healthPoints.value = Mathf.Max(healthPoints.value - damage, 0);
-            print(healthPoints.value);
+            print("POINTS: " + healthPoints.value);
             if (healthPoints.value == 0)
             {
                 Die();
@@ -86,7 +86,6 @@ namespace RPG.Attributes
             // check if instigator rewards Experience
             Experience experience = instigator.GetComponent<Experience>();
             if (experience == null) return;
-
             experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
 
         }

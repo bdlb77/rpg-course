@@ -19,12 +19,13 @@ namespace RPG.Stats
         Experience experience;
         private void Awake()
         {
-            Experience experience = GetComponent<Experience>();
+            experience = GetComponent<Experience>();
             currentLevel = new LazyValue<int>(CalculateLevel);
         }
         private void Start()
         {
            currentLevel.ForceInit();
+           print("CURR LEVEL: " + currentLevel.value);
         }
 
 
@@ -80,7 +81,7 @@ namespace RPG.Stats
             Experience experience = GetComponent<Experience>();
             if (experience == null) return startinglevel;
 
-            float currentXP = experience.GetExperiencePoints();
+            float currentXP = experience.GetPoints();
             int penultimateLevel = progression.GetLevels(Stat.ExperienceToNextLevel, characterClass);
             for (int level = 1; level <= penultimateLevel; level++)
             {

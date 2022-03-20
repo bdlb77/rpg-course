@@ -54,7 +54,7 @@ namespace RPG.Combat
         {
             if (other.GetComponent<Health>() != target) return;
             if (target.IsDead()) return; // if enemy is dead.. Don't do damage
-            print(damage);
+            print("TARGET: " + target);
             target.TakeDamage(instigator, damage);
             speed = 0;
 
