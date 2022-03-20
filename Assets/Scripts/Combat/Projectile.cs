@@ -19,7 +19,6 @@ namespace RPG.Combat
         void Start()
         {
             transform.LookAt(GetAimLocation());
-
         }
         void Update()
         {

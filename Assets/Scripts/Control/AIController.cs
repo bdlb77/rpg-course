@@ -4,6 +4,7 @@ using RPG.Combat;
 using RPG.Core;
 using RPG.Movement;
 using RPG.Attributes;
+using GameDevTV.Utils;
 
 namespace RPG.Control
 {
@@ -14,8 +15,8 @@ namespace RPG.Control
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float wpPromixityTolerance = 1f;
         [SerializeField] float waypointDwellTime = 1.5f;
-        
-        [Range(0,1)]
+
+        [Range(0, 1)]
         [SerializeField] float patrolSpeedFraction = 0.2f;
         Fighter fighter;
         GameObject player;
@@ -24,20 +25,24 @@ namespace RPG.Control
         Mover mover;
 
         // Starting position of the guard
-        Vector3 guardPosition;
+        LazyValue<Vector3> guardPosition;
         // Guard memory! Infinity since the time initially should be really high!  SO when check and updating. .it will always be lower on Initial LOS of player
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceAtWaypoint = Mathf.Infinity;
         int currrentWayPointIdx = 0;
-        private void Start()
+        private void Awake()
         {
             fighter = GetComponent<Fighter>();
             health = GetComponent<Health>();
             mover = GetComponent<Mover>();
             player = GameObject.FindWithTag("Player");
-            guardPosition = transform.position;
-
+            guardPosition = new LazyValue<Vector3>(GetGuardPosition);
         }
+        private void Start()
+        {
+            guardPosition.ForceInit();
+        }
+
         private void Update()
         {
             if (health.IsDead()) return;
@@ -59,7 +64,10 @@ namespace RPG.Control
             }
             UpdateTimers();
         }
-
+        private Vector3 GetGuardPosition()
+        {
+            return transform.position;
+        }
         private void UpdateTimers()
         {
             timeSinceLastSawPlayer += Time.deltaTime;
@@ -68,8 +76,8 @@ namespace RPG.Control
 
         private void PatrolBehaviour()
         {
-            Vector3 nextPosition = guardPosition; // default;
-            
+            Vector3 nextPosition = guardPosition.value; // default;
+
             if (patrolPath != null)
             {
                 if (AtWayPoint())

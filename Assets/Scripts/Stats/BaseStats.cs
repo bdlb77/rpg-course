@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using GameDevTV.Utils;
 
 namespace RPG.Stats
 {
@@ -12,24 +13,41 @@ namespace RPG.Stats
         [SerializeField] Progression progression = null;
         [SerializeField] GameObject levelUpParticleEffect = null;
         [SerializeField] bool shouldUseModifiers = false;
-        int currentLevel = 0;
+        LazyValue<int> currentLevel;
 
         public event Action onLevelUp;
+        Experience experience;
+        private void Awake()
+        {
+            Experience experience = GetComponent<Experience>();
+            currentLevel = new LazyValue<int>(CalculateLevel);
+        }
         private void Start()
         {
-            currentLevel = CalculateLevel();
-            Experience experience = GetComponent<Experience>();
+           currentLevel.ForceInit();
+        }
+
+
+        private void OnEnable()
+        {
             if (experience != null)
             {
                 experience.onExperienceGained += UpdateLevel;
             }
         }
+        private void OnDisable()
+        {
+            if (experience != null)
+            {
+                experience.onExperienceGained -= UpdateLevel;
+            }
+        }
         private void UpdateLevel()
         {
             int newLevel = CalculateLevel();
-            if (newLevel > currentLevel)
+            if (newLevel > currentLevel.value)
             {
-                currentLevel = newLevel;
+                currentLevel.value = newLevel;
                 LevelUpEffect();
                 // call on subscribed functions to `onLevelUp`
                 onLevelUp();
@@ -47,7 +65,7 @@ namespace RPG.Stats
             return (GetBaseStat(stat) + GetAdditiveModifier(stat)) * (1 + GetPercentageModifier(stat) / 100);
         }
 
-        
+
         private float GetBaseStat(Stat stat)
         {
             return progression.GetStat(stat, characterClass, GetLevel());
@@ -55,13 +73,7 @@ namespace RPG.Stats
 
         public int GetLevel()
         {
-            // Health.Start may run before baseStats.Start.. Meaning Race condition on currentLevel being Evaluated.
-            // So we check if level has not been calculated (if still 0), and then calculate it.
-            if (currentLevel < 1)
-            {
-                currentLevel = CalculateLevel();
-            }
-            return currentLevel;
+            return currentLevel.value;
         }
         private int CalculateLevel()
         {
@@ -86,9 +98,9 @@ namespace RPG.Stats
             if (!shouldUseModifiers) return 0;
 
             float total = 0;
-            foreach(IModifierProvider provider in GetComponents<IModifierProvider>())
+            foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
             {
-                foreach(float modifier in provider.GetAdditiveModifiers(stat))
+                foreach (float modifier in provider.GetAdditiveModifiers(stat))
                 {
                     total += modifier;
                 }
@@ -98,11 +110,11 @@ namespace RPG.Stats
         private float GetPercentageModifier(Stat stat)
         {
             if (!shouldUseModifiers) return 0;
-            
+
             float total = 0;
-            foreach(IModifierProvider provider in GetComponents<IModifierProvider>())
+            foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
             {
-                foreach(float modifier in provider.GetPercentageModifiers(stat))
+                foreach (float modifier in provider.GetPercentageModifiers(stat))
                 {
                     total += modifier;
                 }

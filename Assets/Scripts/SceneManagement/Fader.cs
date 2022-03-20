@@ -19,7 +19,7 @@ namespace RPG.SceneManagement
             while (canvasGroup.alpha < 1)
             {
                 canvasGroup.alpha += Time.deltaTime / fadeTime;
-               yield return null;
+                yield return null;
             }
         }
         public IEnumerator FadeIn(float fadeTime)
