@@ -13,96 +13,193 @@ MonoBehaviour:
   m_Name: Progression
   m_EditorClassIdentifier: 
   progressionCharacterClasses:
-  - characterClass: 0 # Player
+  - characterClass: 0
     stats:
-      - stat: 0 # Health
-        levels:
-          - 50
-          - 100
-          - 200
-          - 400
-          - 800
-      - stat: 2 # Experience Reward
-        levels:
-          - 20
-          - 40
-          - 80
-          - 160
-          - 320
-      - stat: 3 # Base Damage
-        levels:
-          - 5
-          - 10
-          - 15
-          - 20
-          - 25
-  - characterClass: 1 # Grunt
+    - stat: 0
+      levels:
+      - 200
+      - 240
+      - 280
+      - 320
+      - 360
+      - 400
+      - 440
+      - 480
+      - 520
+      - 560
+    - stat: 2
+      levels:
+      - 2000
+      - 4000
+      - 6000
+      - 8000
+      - 10000
+      - 12000
+      - 14000
+      - 16000
+      - 18000
+      - 20000
+    - stat: 3
+      levels:
+      - 10
+      - 15
+      - 20
+      - 25
+      - 30
+      - 35
+      - 40
+      - 45
+      - 50
+      - 55
+  - characterClass: 1
     stats:
-      - stat: 0 # Health
-        levels:
-          - 15
-          - 25
-          - 45
-          - 85
-          - 165
-      - stat: 1 # Experience Reward
-        levels:
-          - 10
-          - 15
-          - 30
-          - 50
-          - 80
-      - stat: 3 # Base Damage
-        levels:
-          - 5
-          - 10
-          - 15
-          - 20
-          - 25
-  - characterClass: 2 # Archer
+    - stat: 0
+      levels:
+      - 60
+      - 90
+      - 120
+      - 150
+      - 180
+      - 210
+      - 240
+      - 270
+      - 300
+      - 330
+    - stat: 1
+      levels:
+      - 80
+      - 120
+      - 160
+      - 200
+      - 240
+      - 280
+      - 320
+      - 360
+      - 400
+      - 440
+    - stat: 3
+      levels:
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+  - characterClass: 2
     stats:
-      - stat: 0 # Health
-        levels:
-          - 10
-          - 20
-          - 40
-          - 75
-          - 100
-      - stat: 1 # Experience Reward
-        levels:
-          - 20
-          - 40
-          - 60
-          - 120
-          - 150
-      - stat: 3 # Base Damage
-        levels:
-          - 5
-          - 10
-          - 15
-          - 20
-          - 25
-  - characterClass: 3 # Boss
+    - stat: 0
+      levels:
+      - 60
+      - 90
+      - 120
+      - 150
+      - 180
+      - 210
+      - 240
+      - 270
+      - 300
+      - 330
+    - stat: 1
+      levels:
+      - 64
+      - 96
+      - 128
+      - 160
+      - 192
+      - 224
+      - 256
+      - 288
+      - 320
+      - 352
+    - stat: 3
+      levels:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 10
+      - 11
+      - 12
+  - characterClass: 3
     stats:
-      - stat: 0 # Health
-        levels:
-          - 150
-          - 300
-          - 500
-          - 750
-          - 1000
-      - stat: 1 # Experience Reward
-        levels:
-          - 50
-          - 100
-          - 170
-          - 250
-          - 400
-      - stat: 3 # Base Damage
-        levels:
-          - 10
-          - 20
-          - 35
-          - 50
-          - 100
-
+    - stat: 0
+      levels:
+      - 120
+      - 180
+      - 240
+      - 300
+      - 360
+      - 420
+      - 480
+      - 540
+      - 600
+      - 660
+    - stat: 1
+      levels:
+      - 96
+      - 144
+      - 192
+      - 240
+      - 288
+      - 336
+      - 384
+      - 432
+      - 480
+      - 528
+    - stat: 3
+      levels:
+      - 12
+      - 14
+      - 17
+      - 19
+      - 22
+      - 24
+      - 26
+      - 29
+      - 31
+      - 34
+  - characterClass: 4
+    stats:
+    - stat: 0
+      levels:
+      - 240
+      - 360
+      - 480
+      - 600
+      - 720
+      - 840
+      - 640
+      - 1080
+      - 1200
+      - 1320
+    - stat: 1
+      levels:
+      - 160
+      - 240
+      - 320
+      - 400
+      - 480
+      - 560
+      - 640
+      - 720
+      - 800
+      - 880
+    - stat: 3
+      levels:
+      - 28
+      - 34
+      - 39
+      - 45
+      - 50
+      - 56
+      - 62
+      - 67
+      - 73
+      - 78
