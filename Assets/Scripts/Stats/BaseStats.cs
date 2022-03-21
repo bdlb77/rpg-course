@@ -25,7 +25,6 @@ namespace RPG.Stats
         private void Start()
         {
            currentLevel.ForceInit();
-           print("CURR LEVEL: " + currentLevel.value);
         }
 
 

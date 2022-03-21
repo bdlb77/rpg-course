@@ -4,6 +4,7 @@ using RPG.Combat;
 using RPG.Attributes;
 using System;
 using UnityEngine.EventSystems;
+using UnityEngine.AI;
 
 namespace RPG.Control
 {
@@ -22,6 +23,8 @@ namespace RPG.Control
         }
 
         [SerializeField] CursorMapping[] cursorMappings = null;
+        [SerializeField] float maxNavMeshProjectionDistance = 1f;
+        [SerializeField] float maxNavPathLength = 25f;
 
         private void Awake()
         {
@@ -100,8 +103,43 @@ namespace RPG.Control
         private bool RaycastNavMesh(out Vector3 target)
         {
             target =  new Vector3();
+            RaycastHit hit;
+            bool hasHit = Physics.Raycast(GetMouseRay(), out hit);
+            if (!hasHit) return false;
+
+            NavMeshHit navMeshHit;            
+            bool hasCastToNavMesh = NavMesh.SamplePosition(
+                hit.point, out navMeshHit, maxNavMeshProjectionDistance, NavMesh.AllAreas);
+            
+            // have not been able to find a nearby navMesh point that was hit by the cursor..
+            if (!hasCastToNavMesh) return false;
+
+            target = navMeshHit.position;
+
+            
+            NavMeshPath path = new NavMeshPath();
+			bool hasPath = NavMesh.CalculatePath(transform.position, target, NavMesh.AllAreas, path); 
+            if (!hasPath) return false;
+
+            // If path is not a complete Path
+            if (path.status != NavMeshPathStatus.PathComplete) return false;
+
+            print("PATH LENGTH: " + GetPathLength(path) + "--" + " MAX LENGTH: " + maxNavPathLength);
+            if (GetPathLength(path) > maxNavPathLength) return false;
             return true;
         }
+
+        private float GetPathLength(NavMeshPath path)
+        {
+            float totalLength = 0f;
+            if (path.corners.Length < 2) return totalLength;
+            for (int i = 0; i < path.corners.Length - 1; i++)
+            {
+                totalLength += Vector3.Distance(path.corners[i], path.corners[i + 1]);
+            }
+            return totalLength;
+        }
+
         private RaycastHit[] RacycastAllSorted()
         {
               RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());

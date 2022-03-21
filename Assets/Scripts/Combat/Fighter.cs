@@ -11,7 +11,7 @@ namespace RPG.Combat
 {
     public class Fighter : MonoBehaviour, IAction, ISaveable, IModifierProvider
     {
-        [SerializeField] float timeBetweenAttacks = 1.1f;
+        [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] Transform leftHandTransform = null;
         [SerializeField] Transform rightHandTransform = null;
         [SerializeField] Weapon defaultWeapon = null;
@@ -19,11 +19,9 @@ namespace RPG.Combat
         float timeSinceLastAttack = Mathf.Infinity;
         
         LazyValue<Weapon> currentWeapon;
-        Mover mover;
 
         
         private void Awake() {
-            mover = GetComponent<Mover>();
             currentWeapon = new LazyValue<Weapon>(InitializeDefaultWeapon);
         }
         private void Start()
@@ -48,11 +46,11 @@ namespace RPG.Combat
             if (!GetIsInRage())
             {
                 // 1f for full speed in fighting mode
-                mover.MoveTo(target.transform.position, 1f);
+                GetComponent<Mover>().MoveTo(target.transform.position, 1f);
             }
             else
             {
-                mover.Cancel();
+                GetComponent<Mover>().Cancel();
                 AttackBehaviour();
             }
         }
@@ -86,7 +84,7 @@ namespace RPG.Combat
         public void Cancel()
         {
             StopAttack();
-            mover.Cancel();
+            GetComponent<Mover>().Cancel();
             target = null;
         }
 
