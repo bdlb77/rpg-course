@@ -4,12 +4,14 @@ using RPG.Core;
 using RPG.Stats;
 using System;
 using GameDevTV.Utils;
+using UnityEngine.Events;
 
 namespace RPG.Attributes
 {
     public class Health : MonoBehaviour, ISaveable
     {
         [SerializeField] float regenerationPercentage = 70f;
+        [SerializeField] UnityEvent takeDamage;
         LazyValue<float> healthPoints;
 
         bool isDead = false;
@@ -25,12 +27,6 @@ namespace RPG.Attributes
         private void Start()
         {
             healthPoints.ForceInit();
-            // If starting.. then hp = -1.. Meaning it's a situation that will not happen in game... therefore the beginning
-            // if (healthPoints < 0)
-            // {
-            //     // get health from Base Stats and Progression.
-            //     healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
-            // }
         }
 
         private void OnEnable()
@@ -49,14 +45,15 @@ namespace RPG.Attributes
 
         public void TakeDamage(GameObject instigator, float damage)
         {
-            print(gameObject.name + " Took Damage: " + damage);
 
             healthPoints.value = Mathf.Max(healthPoints.value - damage, 0);
-            print("POINTS: " + healthPoints.value);
             if (healthPoints.value == 0)
             {
                 Die();
                 AwardExperience(instigator);
+            } else
+            {
+                takeDamage.Invoke();
             }
         }
 

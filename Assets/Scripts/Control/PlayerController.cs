@@ -124,7 +124,6 @@ namespace RPG.Control
             // If path is not a complete Path
             if (path.status != NavMeshPathStatus.PathComplete) return false;
 
-            print("PATH LENGTH: " + GetPathLength(path) + "--" + " MAX LENGTH: " + maxNavPathLength);
             if (GetPathLength(path) > maxNavPathLength) return false;
             return true;
         }
