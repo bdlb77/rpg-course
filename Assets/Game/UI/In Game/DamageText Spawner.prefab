@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3657769991276397918}
   - component: {fileID: 2603444143281112736}
   m_Layer: 0
-  m_Name: DamageTextSpawner
+  m_Name: DamageText Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
