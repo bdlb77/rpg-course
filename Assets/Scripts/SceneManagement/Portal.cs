@@ -67,10 +67,8 @@ namespace RPG.SceneManagement
             {
                 if (portal == this) continue;
                 if (portal.destination != destination) continue;
-                print("Found portal!"); 
                 return portal;
             }
-            print("NO portal!"); 
 
             return null;
         }
