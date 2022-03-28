@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using RPG.Control;
 
 namespace RPG.SceneManagement
 {
@@ -33,30 +34,36 @@ namespace RPG.SceneManagement
                 Debug.LogError("Your Scene To Load not set.");
                 yield break;
             }
-            Fader fader = FindObjectOfType<Fader>();
             DontDestroyOnLoad(gameObject);
 
+            Fader fader = FindObjectOfType<Fader>();
+            SavingWrapper wrapper = FindObjectOfType<SavingWrapper>();
+            PlayerController playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+
+            // Remove Control
+            playerController.enabled = false;
             // fade out in series of frames.. Load Scene.. Then wait secs for series of Frames.. Then Fade in over Series of Frames 
             yield return fader.FadeOut(fadeOutTime);
 
             // save current Level
-            SavingWrapper wrapper = FindObjectOfType<SavingWrapper>();
-
             wrapper.Save();
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
-            
+            // Remove Control of new scene.
+            PlayerController newPlayerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            newPlayerController.enabled = false;
+
 
             // Load current Level
             wrapper.Load();
-
             Portal otherPortal = GetOtherPortal();
-            UpdatePlayer(otherPortal);
-            
+            UpdatePlayer(otherPortal);  
             // Save Again To Update and Save the Position of the Player before FadeIn
             wrapper.Save();
-
             yield return new WaitForSeconds(fadeWaitTime);
-            yield return fader.FadeIn(fadeInTime);
+            newPlayerController.enabled = true;
+            fader.FadeIn(fadeInTime);
+
+            // Restore Control
 
             Destroy(gameObject);
         }
