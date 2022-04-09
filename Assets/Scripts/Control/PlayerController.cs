@@ -102,7 +102,8 @@ namespace RPG.Control
 
         private bool RaycastNavMesh(out Vector3 target)
         {
-            target =  new Vector3();
+            target = new Vector3();
+
             RaycastHit hit;
             bool hasHit = Physics.Raycast(GetMouseRay(), out hit);
             if (!hasHit) return false;
@@ -120,11 +121,10 @@ namespace RPG.Control
             NavMeshPath path = new NavMeshPath();
 			bool hasPath = NavMesh.CalculatePath(transform.position, target, NavMesh.AllAreas, path); 
             if (!hasPath) return false;
-
             // If path is not a complete Path
             if (path.status != NavMeshPathStatus.PathComplete) return false;
-
             if (GetPathLength(path) > maxNavPathLength) return false;
+            
             return true;
         }
 
