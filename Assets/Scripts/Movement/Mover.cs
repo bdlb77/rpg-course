@@ -88,3 +88,4 @@ namespace RPG.Movement
         }
     }
 }
+

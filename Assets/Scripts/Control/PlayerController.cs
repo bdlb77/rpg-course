@@ -4,6 +4,7 @@ using RPG.Combat;
 using RPG.Attributes;
 using System;
 using UnityEngine.EventSystems;
+
 using UnityEngine.AI;
 
 namespace RPG.Control
@@ -24,7 +25,7 @@ namespace RPG.Control
 
         [SerializeField] CursorMapping[] cursorMappings = null;
         [SerializeField] float maxNavMeshProjectionDistance = 1f;
-        [SerializeField] float maxNavPathLength = 25f;
+        [SerializeField] float maxNavPathLength = 40f;
 
         private void Awake()
         {
@@ -95,7 +96,6 @@ namespace RPG.Control
                 }
                 SetCursor(CursorType.Movement);
                 return true;
-
             }
             return false;
         }
@@ -124,7 +124,7 @@ namespace RPG.Control
             // If path is not a complete Path
             if (path.status != NavMeshPathStatus.PathComplete) return false;
             if (GetPathLength(path) > maxNavPathLength) return false;
-            
+
             return true;
         }
 

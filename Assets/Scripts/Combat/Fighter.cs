@@ -18,7 +18,7 @@ namespace RPG.Combat
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
         
-        WeaponConfig currentWeaponConfig;
+        [SerializeField] WeaponConfig currentWeaponConfig;
         LazyValue<Weapon> currentWeapon;
         
         private void Awake() {
@@ -28,6 +28,7 @@ namespace RPG.Combat
         private void Start()
         {
            currentWeapon.ForceInit();
+           print("WEAPON TRANSFORM: " + rightHandTransform.position);
         }
 
         private Weapon InitializeDefaultWeapon() {
