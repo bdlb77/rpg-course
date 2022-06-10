@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2923190275844099647, guid: 4a069e81b5b9a8a4d889cfb6e321177d, type: 3}
       propertyPath: m_Name
-      value: Bow Pickup 1
+      value: Bow Pickup
       objectReference: {fileID: 0}
     - target: {fileID: 3162892457338155718, guid: 4a069e81b5b9a8a4d889cfb6e321177d, type: 3}
       propertyPath: m_RootOrder

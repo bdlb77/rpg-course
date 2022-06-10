@@ -57,7 +57,6 @@ namespace RPG.Movement
         {
             NavMeshPath path = new NavMeshPath();
             bool hasPath = NavMesh.CalculatePath(transform.position, destination, NavMesh.AllAreas, path);
-            print("HELLO");
             if (!hasPath) return false;
             // If path is not a complete Path
             if (path.status != NavMeshPathStatus.PathComplete) return false;

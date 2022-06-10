@@ -39,9 +39,9 @@ namespace RPG.SceneManagement
             Fader fader = FindObjectOfType<Fader>();
             SavingWrapper wrapper = FindObjectOfType<SavingWrapper>();
             PlayerController playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-
             // Remove Control
             playerController.enabled = false;
+
             // fade out in series of frames.. Load Scene.. Then wait secs for series of Frames.. Then Fade in over Series of Frames 
             yield return fader.FadeOut(fadeOutTime);
 
@@ -55,16 +55,19 @@ namespace RPG.SceneManagement
 
             // Load current Level
             wrapper.Load();
+
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);  
             // Save Again To Update and Save the Position of the Player before FadeIn
+            
             wrapper.Save();
+
             yield return new WaitForSeconds(fadeWaitTime);
-            newPlayerController.enabled = true;
             fader.FadeIn(fadeInTime);
 
             // Restore Control
 
+            newPlayerController.enabled = true;
             Destroy(gameObject);
         }
 

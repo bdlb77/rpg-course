@@ -28,7 +28,6 @@ namespace RPG.Combat
         private void Start()
         {
            currentWeapon.ForceInit();
-           print("WEAPON TRANSFORM: " + rightHandTransform.position);
         }
 
         private Weapon InitializeDefaultWeapon() {
@@ -44,7 +43,7 @@ namespace RPG.Combat
             if (target == null) return;
             if (target.IsDead()) return;
 
-            if (!GetIsInRage())
+            if (!GetIsInRage(target.transform))
             {
                 // 1f for full speed in fighting mode
                 GetComponent<Mover>().MoveTo(target.transform.position, 1f);
@@ -89,9 +88,9 @@ namespace RPG.Combat
             GetComponent<Mover>().Cancel();
         }
 
-        private bool GetIsInRage()
+        private bool GetIsInRage(Transform targetTransform)
         {
-            return Vector3.Distance(transform.position, target.transform.position) < currentWeaponConfig.GetRange();
+            return Vector3.Distance(transform.position, targetTransform.position) < currentWeaponConfig.GetRange();
         }
 
         private void StopAttack()
@@ -166,8 +165,14 @@ namespace RPG.Combat
         {
             // If clicking not on a target
             if (combatTarget == null) return false;
-            if (!GetComponent<Mover>().CanMoveTo(combatTarget.transform.position)) return false;
-            
+
+            if (!GetComponent<Mover>().CanMoveTo(combatTarget.transform.position) && 
+                !GetIsInRage(combatTarget.transform)
+            ) 
+            { 
+                return false;
+            }
+
             // If the target has a health component && is not Dead
             Health targetHealth = combatTarget.GetComponent<Health>();
             return targetHealth != null && !targetHealth.IsDead();

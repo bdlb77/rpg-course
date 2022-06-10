@@ -12,9 +12,12 @@ namespace RPG.Control
     {
         [SerializeField] float chaseDistance = 5f;
         [SerializeField] float suspicionTime = 5f; // 3 second!
+        [SerializeField] float aggroCooldownTime = 5f;
+
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float wpPromixityTolerance = 1f;
         [SerializeField] float waypointDwellTime = 1.5f;
+        [SerializeField] float shoutDistance = 5f;
 
         [Range(0, 1)]
         [SerializeField] float patrolSpeedFraction = 0.2f;
@@ -29,7 +32,9 @@ namespace RPG.Control
         // Guard memory! Infinity since the time initially should be really high!  SO when check and updating. .it will always be lower on Initial LOS of player
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceAtWaypoint = Mathf.Infinity;
+        float timeSinceAggrevated = Mathf.Infinity;
         int currrentWayPointIdx = 0;
+
         private void Awake()
         {
             fighter = GetComponent<Fighter>();
@@ -48,7 +53,7 @@ namespace RPG.Control
         {
             if (health.IsDead()) return;
 
-            if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
+            if (IsAggrevated() && fighter.CanAttack(player))
             {
                 AttackBehaviour();
 
@@ -65,6 +70,23 @@ namespace RPG.Control
             }
             UpdateTimers();
         }
+
+        public void Aggrevate()
+        {
+            timeSinceAggrevated = 0;
+        }
+
+        private void AggrevateNearbyEnemies()
+        {
+            RaycastHit[] hits = Physics.SphereCastAll(transform.position, shoutDistance, Vector3.up, 0);
+            foreach (RaycastHit hit in hits)
+            {
+                AIController ai = hit.collider.GetComponent<AIController>();
+                if (ai == null) continue;
+
+                ai.Aggrevate();
+            }
+        }
         private Vector3 GetGuardPosition()
         {
             return transform.position;
@@ -73,6 +95,7 @@ namespace RPG.Control
         {
             timeSinceLastSawPlayer += Time.deltaTime;
             timeSinceAtWaypoint += Time.deltaTime;
+            timeSinceAggrevated += Time.deltaTime;
         }
 
         private void PatrolBehaviour()
@@ -120,6 +143,7 @@ namespace RPG.Control
             // reset time since last saw back to 0;
             timeSinceLastSawPlayer = 0;
             fighter.Attack(player);
+            AggrevateNearbyEnemies();
         }
 
         // called by United
@@ -130,10 +154,11 @@ namespace RPG.Control
 
         }
 
-        private bool InAttackRangeOfPlayer()
+        private bool IsAggrevated()
         {
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-            return distanceToPlayer < chaseDistance;
+            // check aggrevated
+            return distanceToPlayer < chaseDistance || timeSinceAggrevated < aggroCooldownTime;
         }
 
 
