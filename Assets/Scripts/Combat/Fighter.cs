@@ -166,7 +166,8 @@ namespace RPG.Combat
         {
             // If clicking not on a target
             if (combatTarget == null) return false;
-
+            if (!GetComponent<Mover>().CanMoveTo(combatTarget.transform.position)) return false;
+            
             // If the target has a health component && is not Dead
             Health targetHealth = combatTarget.GetComponent<Health>();
             return targetHealth != null && !targetHealth.IsDead();

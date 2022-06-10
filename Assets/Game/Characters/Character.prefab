@@ -383,6 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   maxSpeed: 6
+  maxNavPathLength: 40
 --- !u!195 &1549683485
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -440,6 +441,7 @@ MonoBehaviour:
   leftHandTransform: {fileID: 0}
   rightHandTransform: {fileID: 0}
   defaultWeapon: {fileID: 11400000, guid: a23b855c48cc45b4980af9e7cc15feda, type: 2}
+  currentWeaponConfig: {fileID: 0}
 --- !u!114 &772653938
 MonoBehaviour:
   m_ObjectHideFlags: 0
