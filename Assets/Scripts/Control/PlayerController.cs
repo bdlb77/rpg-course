@@ -12,8 +12,8 @@ namespace RPG.Control
     public class PlayerController : MonoBehaviour
     {
         Health health;
+        bool isDraggingUI = false;
 
-    
         [System.Serializable]
         struct CursorMapping
         {
@@ -66,10 +66,22 @@ namespace RPG.Control
 
         private bool InteractWithUI()
         {
+            if (Input.GetMouseButtonUp(0))
+            {
+                isDraggingUI = false;
+            }
             // Return True / false if we are hovering over Piece of UI
             if (EventSystem.current.IsPointerOverGameObject())
             {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    isDraggingUI = true;
+                }
                 SetCursor(CursorType.UI);
+                return true;
+            }
+            if (isDraggingUI) 
+            {
                 return true;
             }
             return false;
