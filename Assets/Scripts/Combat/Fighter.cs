@@ -6,6 +6,8 @@ using RPG.Attributes;
 using RPG.Stats;
 using System.Collections.Generic;
 using GameDevTV.Utils;
+using GameDevTV.Inventories;
+using System;
 
 namespace RPG.Combat
 {
@@ -16,22 +18,32 @@ namespace RPG.Combat
         [SerializeField] Transform rightHandTransform = null;
         [SerializeField] WeaponConfig defaultWeapon = null;
         Health target;
+        Equipment equipment;
         float timeSinceLastAttack = Mathf.Infinity;
-        
+
         [SerializeField] WeaponConfig currentWeaponConfig;
         LazyValue<Weapon> currentWeapon;
-        
-        private void Awake() {
-            currentWeaponConfig = defaultWeapon;
-            currentWeapon = new LazyValue<Weapon>(InitializeDefaultWeapon);
-        }
-        private void Start()
+
+        private void Awake()
         {
-           currentWeapon.ForceInit();
+            currentWeaponConfig = defaultWeapon;
+            currentWeapon = new LazyValue<Weapon>(SetupDefaultWeapon);
+            equipment = GetComponent<Equipment>();
+            if (equipment)
+            {
+                equipment.equipmentUpdated += UpdateWeapon;
+            }
         }
 
-        private Weapon InitializeDefaultWeapon() {
+        private Weapon SetupDefaultWeapon()
+        {
             return AttachWeapon(defaultWeapon);
+        }
+
+
+        private void Start()
+        {
+            currentWeapon.ForceInit();
         }
 
         private void Update()
@@ -54,6 +66,17 @@ namespace RPG.Combat
                 AttackBehaviour();
             }
         }
+        private void UpdateWeapon()
+        {
+            var weapon = equipment.GetItemInSlot(EquipLocation.Weapon) as WeaponConfig;
+            if (weapon == null)
+            {
+                EquipWeapon(defaultWeapon);
+            } else
+            {
+                EquipWeapon(weapon);
+            }
+        } 
 
         public void EquipWeapon(WeaponConfig weapon)
         {
@@ -122,7 +145,8 @@ namespace RPG.Combat
             if (target == null) return;
             float damage = GetComponent<BaseStats>().GetStat(Stat.Damage);
 
-            if (currentWeapon.value != null) {
+            if (currentWeapon.value != null)
+            {
                 currentWeapon.value.OnHit();
             }
 
@@ -149,10 +173,10 @@ namespace RPG.Combat
 
         public IEnumerable<float> GetAdditiveModifiers(Stat stat)
         {
-           if (stat == Stat.Damage)
-           {
-               yield return currentWeaponConfig.GetDamage();
-           }
+            if (stat == Stat.Damage)
+            {
+                yield return currentWeaponConfig.GetDamage();
+            }
         }
         public IEnumerable<float> GetPercentageModifiers(Stat stat)
         {
@@ -166,10 +190,10 @@ namespace RPG.Combat
             // If clicking not on a target
             if (combatTarget == null) return false;
 
-            if (!GetComponent<Mover>().CanMoveTo(combatTarget.transform.position) && 
+            if (!GetComponent<Mover>().CanMoveTo(combatTarget.transform.position) &&
                 !GetIsInRage(combatTarget.transform)
-            ) 
-            { 
+            )
+            {
                 return false;
             }
 
