@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Blue Bow
   m_EditorClassIdentifier: 
   itemID: ac08512e-4597-438c-a155-2b020322bd20
-  displayName: 
+  displayName: Blue Bow
   description: 
   icon: {fileID: 21300000, guid: f8078c2bb5ee88d4a9472f76e501e0f3, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 2396130214869074099, guid: fce9c560305d2f54db4a49920746d8c9, type: 3}
   stackable: 0
   allowedEquipLocation: 5
   animatorOverride: {fileID: 22100000, guid: 5d86f799a4069e446994c860835749f6, type: 2}
   equippedPrefab: {fileID: 397426049385932324, guid: 9e78dccca7a56d54194587886a2b916a, type: 3}
   projectile: {fileID: 7260814733533657449, guid: 26bf22a5222cf2a469a0e91746021fd3, type: 3}
-  weaponDamage: 0
+  weaponDamage: 10
   weaponPercentageBonus: 20
   weaponRange: 20
   isRightHanded: 0

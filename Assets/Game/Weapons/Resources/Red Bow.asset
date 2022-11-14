@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Red Bow
   m_EditorClassIdentifier: 
   itemID: fc19e223-65f4-4313-b6cc-feaa758a0bb0
-  displayName: 
+  displayName: Red Bow
   description: 
   icon: {fileID: 21300000, guid: f8078c2bb5ee88d4a9472f76e501e0f3, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 2396130214869074099, guid: fce9c560305d2f54db4a49920746d8c9, type: 3}
   stackable: 0
   allowedEquipLocation: 5
   animatorOverride: {fileID: 22100000, guid: 5d86f799a4069e446994c860835749f6, type: 2}
   equippedPrefab: {fileID: 397426049385932324, guid: 9e78dccca7a56d54194587886a2b916a, type: 3}
   projectile: {fileID: 2752109120639416599, guid: 578cbfe3106dd024f8fe675905d74c13, type: 3}
-  weaponDamage: 0
-  weaponPercentageBonus: 0
+  weaponDamage: 4
+  weaponPercentageBonus: 2
   weaponRange: 20
   isRightHanded: 0

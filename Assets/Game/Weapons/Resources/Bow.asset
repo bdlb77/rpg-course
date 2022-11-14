@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Bow
   m_EditorClassIdentifier: 
   itemID: f8437c75-10db-4254-82bc-2df98ba86b72
-  displayName: 
+  displayName: A Bow
   description: 
   icon: {fileID: 21300000, guid: f8078c2bb5ee88d4a9472f76e501e0f3, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 2396130214869074099, guid: fce9c560305d2f54db4a49920746d8c9, type: 3}
   stackable: 0
   allowedEquipLocation: 5
   animatorOverride: {fileID: 22100000, guid: 5d86f799a4069e446994c860835749f6, type: 2}
