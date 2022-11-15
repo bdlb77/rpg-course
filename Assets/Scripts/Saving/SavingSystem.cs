@@ -43,7 +43,10 @@ namespace GameDevTV.Saving
             CaptureState(state);
             SaveFile(saveFile, state);
         }
-
+        public void Load(string saveFile)
+        {
+            RestoreState(LoadFile(saveFile));
+        }
         /// <summary>
         /// Delete the state in the given save file.
         /// </summary>
@@ -54,10 +57,7 @@ namespace GameDevTV.Saving
 
         // PRIVATE
 
-        private void Load(string saveFile)
-        {
-            RestoreState(LoadFile(saveFile));
-        }
+    
 
         private Dictionary<string, object> LoadFile(string saveFile)
         {
