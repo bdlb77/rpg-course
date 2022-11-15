@@ -51,6 +51,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4810123800009367405, guid: 14d950deec230524c9ea8420a263136f, type: 3}
+      propertyPath: numberOfDrops
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810123800009367405, guid: 14d950deec230524c9ea8420a263136f, type: 3}
+      propertyPath: dropLibrary.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810123800009367405, guid: 14d950deec230524c9ea8420a263136f, type: 3}
+      propertyPath: dropLibrary.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a694f1825a4f1fd48a0e0341d58f36b5, type: 2}
+    - target: {fileID: 4810123800009367405, guid: 14d950deec230524c9ea8420a263136f, type: 3}
+      propertyPath: dropLibrary.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a8ff70d8acfb9bd4688d18017fcee020, type: 2}
+    - target: {fileID: 4810123800009367405, guid: 14d950deec230524c9ea8420a263136f, type: 3}
+      propertyPath: dropLibrary.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: a9fabb2b052f63340a73d9139644d5b2, type: 2}
+    - target: {fileID: 4810123800009367405, guid: 14d950deec230524c9ea8420a263136f, type: 3}
+      propertyPath: dropLibrary.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: a9fabb2b052f63340a73d9139644d5b2, type: 2}
     - target: {fileID: 6001644257375687830, guid: 14d950deec230524c9ea8420a263136f, type: 3}
       propertyPath: characterClass
       value: 4

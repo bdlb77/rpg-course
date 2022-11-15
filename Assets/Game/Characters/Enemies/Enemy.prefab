@@ -105,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8902145197200946579, guid: 2f35e5037c1406b43b2a9a92ca04f088, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8902145197200946579, guid: 2f35e5037c1406b43b2a9a92ca04f088, type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
@@ -118,7 +118,7 @@ PrefabInstance:
     - target: {fileID: 8902145197200946579, guid: 2f35e5037c1406b43b2a9a92ca04f088, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4810123800009367405}
     - target: {fileID: 8902145197200946579, guid: 2f35e5037c1406b43b2a9a92ca04f088, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -129,7 +129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8902145197200946579, guid: 2f35e5037c1406b43b2a9a92ca04f088, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
+      value: RandomDrop
       objectReference: {fileID: 0}
     - target: {fileID: 8902145197200946579, guid: 2f35e5037c1406b43b2a9a92ca04f088, type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8902145197200946579, guid: 2f35e5037c1406b43b2a9a92ca04f088, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.AudioSource, UnityEngine
+      value: RPG.Inventory.RandomDropper, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8902145197200946579, guid: 2f35e5037c1406b43b2a9a92ca04f088, type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8902145197200946579, guid: 2f35e5037c1406b43b2a9a92ca04f088, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8902145197200946579, guid: 2f35e5037c1406b43b2a9a92ca04f088, type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -216,6 +216,21 @@ MonoBehaviour:
   waypointDwellTime: 1.5
   shoutDistance: 5
   patrolSpeedFraction: 0.1
+--- !u!114 &4810123800009367405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7061484927039581096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877ec3e54ec49de4086708e1e044b469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scatterDistance: 1
+  dropLibrary: []
+  numberOfDrops: 2
 --- !u!114 &6998265641183652849
 MonoBehaviour:
   m_ObjectHideFlags: 0

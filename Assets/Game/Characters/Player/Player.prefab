@@ -348,6 +348,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   experiencePoints: 0
+--- !u!114 &6215443236331193853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222817470319013488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ecb2c892fb00946b5ae79cd7790dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8245619504144062968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,7 +390,7 @@ MonoBehaviour:
     hotspot: {x: 0, y: 0}
   maxNavMeshProjectionDistance: 1
   raycastRadius: 1
---- !u!114 &6215443236331193853
+--- !u!114 &3802548067434185404
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -387,6 +399,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1222817470319013488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90ecb2c892fb00946b5ae79cd7790dc1, type: 3}
+  m_Script: {fileID: 11500000, guid: 877ec3e54ec49de4086708e1e044b469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scatterDistance: 1
+  dropLibrary: []
+  numberOfDrops: 2
