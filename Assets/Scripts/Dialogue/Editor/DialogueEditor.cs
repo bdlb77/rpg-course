@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
+using System;
 
 namespace RPG.Dialogue.Editor
 {
     public class DialogueEditor : EditorWindow
     {
+        Dialogue selectedDialogue = null;
+
         [MenuItem("Window/Dialogue Editor")]
         public static void ShowEditorWindow()
         {
@@ -28,10 +31,24 @@ namespace RPG.Dialogue.Editor
         }
         public void OnGUI()
         {
-            // laid out like Display Block
-            EditorGUILayout.LabelField("Hello World");
-            EditorGUILayout.LabelField("Hello World1");
-            EditorGUILayout.LabelField("Hello World2");
+            if (selectedDialogue == null)
+            {
+                EditorGUILayout.LabelField("No Dialogue Selected");
+            } else
+            {
+                EditorGUILayout.LabelField(selectedDialogue.name);
+            }
+        }
+        private void OnEnable() {
+            Selection.selectionChanged += OnSelectionChanged;
+        }
+
+        private void OnSelectionChanged()
+        {
+            Dialogue newDialogue = Selection.activeObject as Dialogue;
+            if (newDialogue == null) return;
+            
+            selectedDialogue = newDialogue;
         }
     }
 
