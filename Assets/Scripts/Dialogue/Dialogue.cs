@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,24 @@ namespace RPG.Dialogue
     public class Dialogue : ScriptableObject
     {
         [SerializeField]
-        DialogueNode[] nodes;
+        List<DialogueNode> nodes = new List<DialogueNode>();
 
+#if UNITY_EDITOR
+        private void Awake()
+        {
+            Debug.Log("Awake from " + name);
+            if (nodes.Count == 0)
+            {
+                DialogueNode node = new DialogueNode();
+                node.text = "Default Node";
+                nodes.Add(node);
+            }
+        }
+#endif
+        public IEnumerable<DialogueNode> GetAllNodes()
+        {
+            return nodes;
+        }
     }
 
 }

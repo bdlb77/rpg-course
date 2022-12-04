@@ -1,3 +1,4 @@
+using System.Xml;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,7 +37,11 @@ namespace RPG.Dialogue.Editor
                 EditorGUILayout.LabelField("No Dialogue Selected");
             } else
             {
-                EditorGUILayout.LabelField(selectedDialogue.name);
+                foreach (var node in selectedDialogue.GetAllNodes())
+                {
+                    EditorGUILayout.LabelField(node.text);
+
+                }
             }
         }
         private void OnEnable() {
