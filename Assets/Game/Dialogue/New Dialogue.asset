@@ -19,7 +19,7 @@ MonoBehaviour:
     - b
     - c
   - uniqueID: b
-    text: Howdy to you.
+    text: This is great!
     children: []
   - uniqueID: c
     text: Go away!
