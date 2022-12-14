@@ -39,8 +39,12 @@ namespace RPG.Dialogue.Editor
             {
                 foreach (var node in selectedDialogue.GetAllNodes())
                 {
-                    EditorGUILayout.LabelField(node.text);
-
+                    string newText = EditorGUILayout.TextField(node.text);
+                    if (newText != node.text)
+                    {
+                        node.text = newText;
+                        EditorUtility.SetDirty(selectedDialogue);
+                    }
                 }
             }
         }
