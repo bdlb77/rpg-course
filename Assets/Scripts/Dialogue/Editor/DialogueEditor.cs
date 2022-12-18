@@ -12,7 +12,8 @@ namespace RPG.Dialogue.Editor
     {
         Dialogue selectedDialogue = null;
         GUIStyle nodeStyle;
-        bool isDragging;
+        DialogueNode draggingNode;
+        Vector2 draggingOffset;
 
         [MenuItem("Window/Dialogue Editor")]
         public static void ShowEditorWindow()
@@ -50,21 +51,37 @@ namespace RPG.Dialogue.Editor
 
         private void ProcessEvents()
         {
-            if (Event.current.type == EventType.MouseDown && !isDragging)
+            if (Event.current.type == EventType.MouseDown && draggingNode == null)
             {
-                isDragging = true;
+                draggingNode = GetNodeAtPoint(Event.current.mousePosition);
+                if (draggingNode != null)
+                {
+                    draggingOffset = draggingNode.rect.position - Event.current.mousePosition;
+                }
             }
-            else if (Event.current.type == EventType.MouseDrag && isDragging)
+            else if (Event.current.type == EventType.MouseDrag && draggingNode != null)
             {
                 Undo.RecordObject(selectedDialogue, "Move Dialogue Node");
-                selectedDialogue.GetRootNode().rect.position = Event.current.mousePosition;
+                draggingNode.rect.position = Event.current.mousePosition + draggingOffset;
                 GUI.changed = true;
             }
-            else if (Event.current.type == EventType.MouseUp && isDragging)
+            else if (Event.current.type == EventType.MouseUp && draggingNode != null)
             {
-                selectedDialogue.GetRootNode().rect.position = Event.current.mousePosition;
-                isDragging = false;
+                draggingNode = null;
             }
+        }
+
+        private DialogueNode GetNodeAtPoint(Vector2 mousePosition)
+        {
+            DialogueNode foundNode = null;
+            foreach (DialogueNode node in selectedDialogue.GetAllNodes())
+            {
+                if (node.rect.Contains(mousePosition))
+                {
+                    foundNode = node;
+                }
+            }
+            return foundNode;
         }
 
         private void OnGUINode(DialogueNode node)
