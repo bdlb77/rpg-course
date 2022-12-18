@@ -42,6 +42,12 @@ namespace RPG.Dialogue.Editor
             else
             {
                 ProcessEvents();
+                // connections will go underneath nodes
+                foreach (var node in selectedDialogue.GetAllNodes())
+                {
+                    DrawConnections(node);
+                }
+
                 foreach (var node in selectedDialogue.GetAllNodes())
                 {
                     OnGUINode(node);
@@ -99,11 +105,28 @@ namespace RPG.Dialogue.Editor
                 node.uniqueID = newUniqueID;
             }
 
-           foreach(DialogueNode childNode in selectedDialogue.GetAllChildren(node))
-           {
-                EditorGUILayout.LabelField(childNode.text);
-           }
             GUILayout.EndArea();
+        }
+
+        private void DrawConnections(DialogueNode parentNode)
+        {
+            Vector3 startPosition = new Vector2(parentNode.rect.xMax, parentNode.rect.center.y);
+            foreach (DialogueNode childNode in selectedDialogue.GetAllChildren(parentNode))
+            {
+
+                Vector3 endPosition = new Vector2(childNode.rect.xMin, childNode.rect.center.y);
+                Vector3 controlPointOffset = endPosition - startPosition;
+                controlPointOffset.y = 0;
+                controlPointOffset.x *= 0.8f;
+                Handles.DrawBezier(
+                    startPosition,
+                    endPosition,
+                    startPosition + controlPointOffset,
+                    endPosition - controlPointOffset,
+                    Color.white,
+                    null,
+                    4f);
+            }
         }
 
         private void OnEnable()
