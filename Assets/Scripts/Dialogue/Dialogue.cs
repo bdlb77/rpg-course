@@ -24,10 +24,15 @@ namespace RPG.Dialogue
                 nodes.Add(node);
             }
         }
+
 #endif
         public IEnumerable<DialogueNode> GetAllNodes()
         {
             return nodes;
+        }
+        public DialogueNode GetRootNode()
+        {
+            return nodes[0];
         }
     }
 

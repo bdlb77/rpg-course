@@ -18,9 +18,27 @@ MonoBehaviour:
     children:
     - b
     - c
+    position:
+      serializedVersion: 2
+      x: 10
+      y: 10
+      width: 200
+      height: 200
   - uniqueID: b
     text: This is great!
     children: []
+    position:
+      serializedVersion: 2
+      x: 100
+      y: 100
+      width: 200
+      height: 200
   - uniqueID: c
     text: Go away!
     children: []
+    position:
+      serializedVersion: 2
+      x: 200
+      y: 200
+      width: 200
+      height: 200

@@ -12,6 +12,7 @@ namespace RPG.Dialogue.Editor
     {
         Dialogue selectedDialogue = null;
         GUIStyle nodeStyle;
+        bool isDragging;
 
         [MenuItem("Window/Dialogue Editor")]
         public static void ShowEditorWindow()
@@ -36,8 +37,10 @@ namespace RPG.Dialogue.Editor
             if (selectedDialogue == null)
             {
                 EditorGUILayout.LabelField("No Dialogue Selected", EditorStyles.whiteLabel);
-            } else
+            }
+            else
             {
+                ProcessEvents();
                 foreach (var node in selectedDialogue.GetAllNodes())
                 {
                     OnGUINode(node);
@@ -45,9 +48,28 @@ namespace RPG.Dialogue.Editor
             }
         }
 
+        private void ProcessEvents()
+        {
+            if (Event.current.type == EventType.MouseDown && !isDragging)
+            {
+                isDragging = true;
+            }
+            else if (Event.current.type == EventType.MouseDrag && isDragging)
+            {
+                Undo.RecordObject(selectedDialogue, "Move Dialogue Node");
+                selectedDialogue.GetRootNode().rect.position = Event.current.mousePosition;
+                GUI.changed = true;
+            }
+            else if (Event.current.type == EventType.MouseUp && isDragging)
+            {
+                selectedDialogue.GetRootNode().rect.position = Event.current.mousePosition;
+                isDragging = false;
+            }
+        }
+
         private void OnGUINode(DialogueNode node)
         {
-            GUILayout.BeginArea(node.position, nodeStyle);
+            GUILayout.BeginArea(node.rect, nodeStyle);
             EditorGUI.BeginChangeCheck();
             EditorGUILayout.LabelField("Node: ");
             string newUniqueID = EditorGUILayout.TextField(node.uniqueID);
@@ -62,7 +84,8 @@ namespace RPG.Dialogue.Editor
             GUILayout.EndArea();
         }
 
-        private void OnEnable() {
+        private void OnEnable()
+        {
             Selection.selectionChanged += OnSelectionChanged;
             nodeStyle = new GUIStyle();
             nodeStyle.normal.background = EditorGUIUtility.Load("node0") as Texture2D;
@@ -76,7 +99,7 @@ namespace RPG.Dialogue.Editor
         {
             Dialogue newDialogue = Selection.activeObject as Dialogue;
             if (newDialogue == null) return;
-            
+
             selectedDialogue = newDialogue;
         }
     }
