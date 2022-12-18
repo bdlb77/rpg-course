@@ -11,6 +11,7 @@ namespace RPG.Dialogue.Editor
     public class DialogueEditor : EditorWindow
     {
         Dialogue selectedDialogue = null;
+        GUIStyle nodeStyle;
 
         [MenuItem("Window/Dialogue Editor")]
         public static void ShowEditorWindow()
@@ -34,29 +35,41 @@ namespace RPG.Dialogue.Editor
         {
             if (selectedDialogue == null)
             {
-                EditorGUILayout.LabelField("No Dialogue Selected");
+                EditorGUILayout.LabelField("No Dialogue Selected", EditorStyles.whiteLabel);
             } else
             {
                 foreach (var node in selectedDialogue.GetAllNodes())
                 {
-                    EditorGUI.BeginChangeCheck();
-                    EditorGUILayout.LabelField("Node: ");
-                    string newUniqueID = EditorGUILayout.TextField(node.uniqueID);
-                    string newText = EditorGUILayout.TextField(node.text);
-
-                    if (EditorGUI.EndChangeCheck())
-                    {
-                        Undo.RecordObject(selectedDialogue, "Update Dialogue Text");
-                        node.text = newText;
-                        node.uniqueID = newUniqueID;
-                    }
-                    
-
+                    OnGUINode(node);
                 }
             }
         }
+
+        private void OnGUINode(DialogueNode node)
+        {
+            GUILayout.BeginArea(node.position, nodeStyle);
+            EditorGUI.BeginChangeCheck();
+            EditorGUILayout.LabelField("Node: ");
+            string newUniqueID = EditorGUILayout.TextField(node.uniqueID);
+            string newText = EditorGUILayout.TextField(node.text);
+
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(selectedDialogue, "Update Dialogue Text");
+                node.text = newText;
+                node.uniqueID = newUniqueID;
+            }
+            GUILayout.EndArea();
+        }
+
         private void OnEnable() {
             Selection.selectionChanged += OnSelectionChanged;
+            nodeStyle = new GUIStyle();
+            nodeStyle.normal.background = EditorGUIUtility.Load("node0") as Texture2D;
+            nodeStyle.normal.textColor = Color.white;
+
+            nodeStyle.padding = new RectOffset(20, 20, 20, 20);
+            nodeStyle.border = new RectOffset(12, 12, 12, 12);
         }
 
         private void OnSelectionChanged()
