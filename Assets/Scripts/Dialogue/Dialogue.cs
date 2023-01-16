@@ -20,9 +20,9 @@ namespace RPG.Dialogue
             Debug.Log("Awake from " + name);
             if (nodes.Count == 0)
             {
-                DialogueNode node = new DialogueNode();
-                node.text = "Default Node";
-                nodes.Add(node);
+                DialogueNode rootNode = new DialogueNode();
+                rootNode.uniqueID = Guid.NewGuid().ToString();
+                nodes.Add(rootNode);
             }
             OnValidate();
         }
@@ -68,6 +68,18 @@ namespace RPG.Dialogue
                     yield return nodeLookup[childID];
                 }
             }
+        }
+
+        public void CreateNode(DialogueNode parent)
+        {
+            DialogueNode newNode = new DialogueNode();
+            newNode.uniqueID = Guid.NewGuid().ToString();
+            parent.children.Add(newNode.uniqueID);
+            nodes.Add(newNode);
+
+            // update the onLookup to redraw bezier lines
+            OnValidate();
+
         }
     }
 
