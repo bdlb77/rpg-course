@@ -14,6 +14,9 @@ namespace RPG.Dialogue.Editor
 
         [NonSerialized]
         GUIStyle nodeStyle;
+
+        [NonSerialized]
+        Vector2 draggingOffset;
         [NonSerialized]
         DialogueNode draggingNode;
         [NonSerialized]
@@ -23,10 +26,12 @@ namespace RPG.Dialogue.Editor
         DialogueNode deletingNode;
         [NonSerialized]
         DialogueNode linkingParentNode = null;
-
-        [NonSerialized]
-        Vector2 draggingOffset;
+        
         Vector2 scrollPosition;
+        [NonSerialized]
+        bool draggingCanvas = false;
+        [NonSerialized]
+        Vector2 draggingCanvasOffset;
 
         [MenuItem("Window/Dialogue Editor")]
         public static void ShowEditorWindow()
@@ -94,6 +99,11 @@ namespace RPG.Dialogue.Editor
                 {
                     draggingOffset = draggingNode.rect.position - Event.current.mousePosition;
                 }
+                else 
+                {
+                    draggingCanvas = true;
+                    draggingCanvasOffset = Event.current.mousePosition + scrollPosition;
+                }
             }
             else if (Event.current.type == EventType.MouseDrag && draggingNode != null)
             {
@@ -101,9 +111,20 @@ namespace RPG.Dialogue.Editor
                 draggingNode.rect.position = Event.current.mousePosition + draggingOffset;
                 GUI.changed = true;
             }
+            else if (Event.current.type == EventType.MouseDrag && draggingCanvas)
+            {
+                // update scrollPosition
+                scrollPosition = draggingCanvasOffset - Event.current.mousePosition;
+                // redraw
+                GUI.changed = true;
+            }
             else if (Event.current.type == EventType.MouseUp && draggingNode != null)
             {
                 draggingNode = null;
+            }
+            else if (Event.current.type == EventType.MouseUp && draggingCanvas)
+            {
+                draggingCanvas = false;
             }
         }
 
