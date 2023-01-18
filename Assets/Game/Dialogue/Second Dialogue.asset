@@ -14,11 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - uniqueID: cbdb5124-5c6e-4402-b5b5-9673842d2e94
-    text: 
+    text: A new Node
+    children:
+    - 5dde1e29-3e33-4711-8ecd-cc1fd6a62b88
+    - 67f480ea-a235-461f-9b50-e0e06b621fef
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 143
+      width: 200
+      height: 100
+  - uniqueID: 5dde1e29-3e33-4711-8ecd-cc1fd6a62b88
+    text: a secondary
     children: []
     rect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 372
+      y: 131
+      width: 200
+      height: 100
+  - uniqueID: 67f480ea-a235-461f-9b50-e0e06b621fef
+    text: a tertiary
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 346
+      y: 262
       width: 200
       height: 100
