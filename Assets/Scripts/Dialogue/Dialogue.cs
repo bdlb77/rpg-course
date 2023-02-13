@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 
@@ -20,9 +21,7 @@ namespace RPG.Dialogue
             Debug.Log("Awake from " + name);
             if (nodes.Count == 0)
             {
-                DialogueNode rootNode = new DialogueNode();
-                rootNode.uniqueID = Guid.NewGuid().ToString();
-                nodes.Add(rootNode);
+                CreateNode(null);
             }
             OnValidate();
         }
@@ -32,7 +31,7 @@ namespace RPG.Dialogue
             nodeLookup.Clear();
             foreach(DialogueNode node in GetAllNodes())
             {
-                nodeLookup[node.uniqueID] = node;
+                nodeLookup[node.name] = node;
             }
         }
         public IEnumerable<DialogueNode> GetAllNodes()
@@ -72,9 +71,14 @@ namespace RPG.Dialogue
 
         public void CreateNode(DialogueNode parent)
         {
-            DialogueNode newNode = new DialogueNode();
-            newNode.uniqueID = Guid.NewGuid().ToString();
-            parent.children.Add(newNode.uniqueID);
+            // create new Scriptable Object. 
+            DialogueNode newNode = CreateInstance<DialogueNode>();
+            newNode.name = Guid.NewGuid().ToString();
+            Undo.RegisterCreatedObjectUndo(newNode, "Created Dialogue Node");
+            if (parent != null)
+            {
+                parent.children.Add(newNode.name);
+            }
             nodes.Add(newNode);
 
             // update the onLookup to redraw bezier lines
@@ -85,15 +89,18 @@ namespace RPG.Dialogue
         public void DeleteNode(DialogueNode nodeToDelete)
         {
             nodes.Remove(nodeToDelete);
+
             OnValidate();
             CleanDanglingChildrenNodes(nodeToDelete);
+            // need to destroy after cleanDanglingChildren since we use it's reference to clean any chjildren nodes
+            Undo.DestroyObjectImmediate(nodeToDelete);
         }
 
         private void CleanDanglingChildrenNodes(DialogueNode nodeToDelete)
         {
             foreach (DialogueNode node in GetAllNodes())
             {
-                node.children.Remove(nodeToDelete.uniqueID);
+                node.children.Remove(nodeToDelete.name);
             }
         }
     }
