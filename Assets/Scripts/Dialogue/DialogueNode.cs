@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
+using System;
 
 namespace RPG.Dialogue
 {
@@ -13,11 +13,12 @@ namespace RPG.Dialogue
         [SerializeField] List<string> children = new List<string>();
         [SerializeField] Rect rect = new Rect(0, 0, 200, 100);
 
+        [SerializeField] bool isPlayerSpeaking = false;
 
         public Rect GetRect { get { return rect; } }
         public string Text { get { return text; } }
         public List<string> Children { get { return children; } }
-
+        public bool IsPlayerSpeaking { get { return isPlayerSpeaking; }}
 #if UNITY_EDITOR
         public void SetPosition(Vector2 newPosition)
         {
@@ -55,6 +56,14 @@ namespace RPG.Dialogue
             children.Remove(childToRemove);
             // make sure the dialogue Node is marked as dirty in scene since if Child Object, we need to mark it dirty to save properly
             EditorUtility.SetDirty(this);
+        }
+
+        internal void SetPlayerSpeaking(bool newIsPlayerSpeaking)
+        {
+            Undo.RecordObject(this, "Change Is Player Speaking");
+            isPlayerSpeaking = newIsPlayerSpeaking;
+            EditorUtility.SetDirty(this);
+
         }
     }
 #endif
