@@ -15,15 +15,8 @@ namespace RPG.Dialogue
         List<DialogueNode> nodes = new List<DialogueNode>();
         Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
 
-#if UNITY_EDITOR
-        private void Awake()
-        {
-            Debug.Log("Awake from " + name);
-      
-            OnValidate();
-        }
 
-#endif
+
         private void OnValidate() {
             nodeLookup.Clear();
             foreach(DialogueNode node in GetAllNodes())
@@ -56,7 +49,7 @@ namespace RPG.Dialogue
             // return foundNodes;
 
             
-            foreach(string childID in parentNode.children)
+            foreach(string childID in parentNode.Children)
             {
                 if (nodeLookup.ContainsKey(childID))
                 {
@@ -66,24 +59,22 @@ namespace RPG.Dialogue
             }
         }
 
+#if UNITY_EDITOR
         public void CreateNode(DialogueNode parent)
         {
             // create new Scriptable Object. 
-            DialogueNode newNode = CreateInstance<DialogueNode>();
-            newNode.name = Guid.NewGuid().ToString();
+            DialogueNode newNode = MakeNode(parent);
             Undo.RegisterCreatedObjectUndo(newNode, "Created Dialogue Node");
-            if (parent != null)
-            {
-                parent.children.Add(newNode.name);
-            }
-            nodes.Add(newNode);
-            // update the onLookup to redraw bezier lines
-            OnValidate();
+            Undo.RecordObject(this, "Added Dialogue Node");
+            AddNode(newNode);
 
         }
 
+
         public void DeleteNode(DialogueNode nodeToDelete)
         {
+            Undo.RecordObject(this, "Deleting Dialogue Node");
+
             nodes.Remove(nodeToDelete);
 
             OnValidate();
@@ -96,12 +87,34 @@ namespace RPG.Dialogue
         {
             foreach (DialogueNode node in GetAllNodes())
             {
-                node.children.Remove(nodeToDelete.name);
+                node.RemoveChild(nodeToDelete.name);
             }
         }
 
+
+        private void AddNode(DialogueNode newNode)
+        {
+            nodes.Add(newNode);
+            // update the onLookup to redraw bezier lines
+            OnValidate();
+        }
+        
+        private static DialogueNode MakeNode(DialogueNode parent)
+        {
+            DialogueNode newNode = CreateInstance<DialogueNode>();
+            newNode.name = Guid.NewGuid().ToString();
+            if (parent != null)
+            {
+                parent.AddChild(newNode.name);
+            }
+
+            return newNode;
+        }
+#endif
+
         public void OnBeforeSerialize()
         {
+#if UNITY_EDITOR
             // When about to save, make sure we check to create root node
             if (nodes.Count == 0)
             {
@@ -117,11 +130,12 @@ namespace RPG.Dialogue
                     }
                 }
             }
+#endif
         }
 
         public void OnAfterDeserialize()
         {
-            throw new NotImplementedException();
+            Debug.Log("Not Implemented");
         }
     }
 
