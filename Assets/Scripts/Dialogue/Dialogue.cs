@@ -9,7 +9,7 @@ using UnityEngine;
 namespace RPG.Dialogue
 {
     [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue", order = 0)]
-    public class Dialogue : ScriptableObject
+    public class Dialogue : ScriptableObject, ISerializationCallbackReceiver
     {
         [SerializeField]
         List<DialogueNode> nodes = new List<DialogueNode>();
@@ -19,10 +19,7 @@ namespace RPG.Dialogue
         private void Awake()
         {
             Debug.Log("Awake from " + name);
-            if (nodes.Count == 0)
-            {
-                CreateNode(null);
-            }
+      
             OnValidate();
         }
 
@@ -80,7 +77,6 @@ namespace RPG.Dialogue
                 parent.children.Add(newNode.name);
             }
             nodes.Add(newNode);
-
             // update the onLookup to redraw bezier lines
             OnValidate();
 
@@ -102,6 +98,30 @@ namespace RPG.Dialogue
             {
                 node.children.Remove(nodeToDelete.name);
             }
+        }
+
+        public void OnBeforeSerialize()
+        {
+            // When about to save, make sure we check to create root node
+            if (nodes.Count == 0)
+            {
+                CreateNode(null);
+            }
+            if (AssetDatabase.GetAssetPath(this) != "")
+            {
+                foreach (DialogueNode node in GetAllNodes())
+                {
+                    if (AssetDatabase.GetAssetPath(node) == "")
+                    {
+                        AssetDatabase.AddObjectToAsset(node, this);
+                    }
+                }
+            }
+        }
+
+        public void OnAfterDeserialize()
+        {
+            throw new NotImplementedException();
         }
     }
 
