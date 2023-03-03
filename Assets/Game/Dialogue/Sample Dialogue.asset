@@ -1,26 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8125950849319080328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
-  m_Name: bc5a8749-05f7-4352-8396-dfc5d0d26c46
-  m_EditorClassIdentifier: 
-  text: 
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 1210
-    y: 74
-    width: 200
-    height: 100
-  isPlayerSpeaking: 1
 --- !u!114 &-7235359208417910432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
   m_Name: 541211b0-e7ba-460e-abbf-bfa61ba6377c
   m_EditorClassIdentifier: 
-  text: 
+  text: Ahh.. I doubt it.
   children:
   - f77f07bf-0e09-4f9e-a79a-6415fc9d493c
   rect:
     serializedVersion: 2
-    x: 975
-    y: 17
+    x: 1050
+    y: -15
     width: 200
     height: 100
-  isPlayerSpeaking: 0
+  isPlayerSpeaking: 1
 --- !u!114 &-6898006140696032073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,36 +34,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
   m_Name: 2252c79d-647f-4f9f-8a47-d9465f4f0cb7
   m_EditorClassIdentifier: 
-  text: 
-  children: []
+  text: I've lived here since a wee Child!
+  children:
+  - cabbe86f-7b0a-4839-9f6f-2314bffb18e8
   rect:
     serializedVersion: 2
-    x: 366
+    x: 365
     y: 199
     width: 200
     height: 100
-  isPlayerSpeaking: 0
---- !u!114 &-6539105748222006616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
-  m_Name: 57eaa84b-d57b-447b-86b9-0202f7467735
-  m_EditorClassIdentifier: 
-  text: 
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 1222
-    y: 211
-    width: 200
-    height: 100
-  isPlayerSpeaking: 0
+  isPlayerSpeaking: 1
 --- !u!114 &-6197456772186473214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
   m_Name: e1bc19b1-6951-46ef-8fa6-d3068afe4ade
   m_EditorClassIdentifier: 
-  text: 
+  text: I came here from Newton.
   children:
   - 2dd3f86c-c4e3-4e0c-99c2-7b27895b1c32
   rect:
@@ -106,7 +65,7 @@ MonoBehaviour:
     y: 18
     width: 200
     height: 100
-  isPlayerSpeaking: 0
+  isPlayerSpeaking: 1
 --- !u!114 &-5806217597180027838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,17 +78,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
   m_Name: 2dd3f86c-c4e3-4e0c-99c2-7b27895b1c32
   m_EditorClassIdentifier: 
-  text: 
+  text: Newton eh? I heard there's trouble abrewin there.
   children:
   - 541211b0-e7ba-460e-abbf-bfa61ba6377c
-  - 884101f8-71bf-43ca-ba2a-479c34efc826
   rect:
     serializedVersion: 2
     x: 726
     y: 18
     width: 200
     height: 100
-  isPlayerSpeaking: 1
+  isPlayerSpeaking: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,11 +106,32 @@ MonoBehaviour:
   - {fileID: -6898006140696032073}
   - {fileID: -5806217597180027838}
   - {fileID: -7235359208417910432}
-  - {fileID: 2439334001134171229}
-  - {fileID: -8125950849319080328}
   - {fileID: 1792679641490765935}
-  - {fileID: -6539105748222006616}
+  - {fileID: 4212616352856986700}
+  - {fileID: 648712033844377270}
   newNodeOffset: {x: 250, y: 0}
+--- !u!114 &648712033844377270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
+  m_Name: 7dd1e8ca-621f-4a4e-a35a-348b010d98de
+  m_EditorClassIdentifier: 
+  text: Who?
+  children:
+  - f77f07bf-0e09-4f9e-a79a-6415fc9d493c
+  rect:
+    serializedVersion: 2
+    x: 1074
+    y: 375
+    width: 200
+    height: 100
+  isPlayerSpeaking: 1
 --- !u!114 &1792679641490765935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,17 +144,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
   m_Name: f77f07bf-0e09-4f9e-a79a-6415fc9d493c
   m_EditorClassIdentifier: 
-  text: 
-  children:
-  - 57eaa84b-d57b-447b-86b9-0202f7467735
+  text: Well then don't worry about it. Say... Are you hungry? I could grub.
+  children: []
   rect:
     serializedVersion: 2
-    x: 1015
-    y: 278
+    x: 1414
+    y: 47
     width: 200
     height: 100
-  isPlayerSpeaking: 1
---- !u!114 &2439334001134171229
+  isPlayerSpeaking: 0
+--- !u!114 &4212616352856986700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,15 +163,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
-  m_Name: 884101f8-71bf-43ca-ba2a-479c34efc826
+  m_Name: cabbe86f-7b0a-4839-9f6f-2314bffb18e8
   m_EditorClassIdentifier: 
-  text: 
+  text: Oh really. Then you must now Mr. Shikter
   children:
-  - bc5a8749-05f7-4352-8396-dfc5d0d26c46
+  - 7dd1e8ca-621f-4a4e-a35a-348b010d98de
   rect:
     serializedVersion: 2
-    x: 996
-    y: 155
+    x: 717
+    y: 269
     width: 200
     height: 100
   isPlayerSpeaking: 0
@@ -209,14 +187,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
   m_Name: 9df7e427-e55d-4a3c-95ac-c9c5c86bd6af
   m_EditorClassIdentifier: 
-  text: A welcome to the Adventurer!
+  text: You don't look like you're from around Here.
   children:
   - e1bc19b1-6951-46ef-8fa6-d3068afe4ade
   - 2252c79d-647f-4f9f-8a47-d9465f4f0cb7
   rect:
     serializedVersion: 2
-    x: 9
-    y: 72
+    x: 10
+    y: 73
     width: 200
     height: 100
   isPlayerSpeaking: 0
