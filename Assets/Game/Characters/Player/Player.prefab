@@ -335,6 +335,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventorySize: 16
+--- !u!114 &3802548067434185404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222817470319013488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877ec3e54ec49de4086708e1e044b469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scatterDistance: 1
+  dropLibrary: {fileID: 0}
+  numberOfDrops: 2
 --- !u!114 &4482473591744373219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,7 +405,7 @@ MonoBehaviour:
     hotspot: {x: 0, y: 0}
   maxNavMeshProjectionDistance: 1
   raycastRadius: 1
---- !u!114 &3802548067434185404
+--- !u!114 &816088810588880929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -399,9 +414,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1222817470319013488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 877ec3e54ec49de4086708e1e044b469, type: 3}
+  m_Script: {fileID: 11500000, guid: 15e639acfccf934488584fc5cc00e942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scatterDistance: 1
-  dropLibrary: []
-  numberOfDrops: 2
+  currentDialogue: {fileID: 11400000, guid: f81933ec1e754344691f66d5052e81dc, type: 2}
