@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e02012e869c1ff43ab0315a9308199a, type: 3}
-  m_Name: New Dialogue
+  m_Name: Sample Dialogue
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 5567692609117940104}
@@ -209,14 +209,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
   m_Name: 9df7e427-e55d-4a3c-95ac-c9c5c86bd6af
   m_EditorClassIdentifier: 
-  text: 
+  text: A welcome to the Adventurer!
   children:
   - e1bc19b1-6951-46ef-8fa6-d3068afe4ade
   - 2252c79d-647f-4f9f-8a47-d9465f4f0cb7
   rect:
     serializedVersion: 2
     x: 9
-    y: 70
+    y: 72
     width: 200
     height: 100
   isPlayerSpeaking: 0
