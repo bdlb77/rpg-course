@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e02012e869c1ff43ab0315a9308199a, type: 3}
-  m_Name: Sample Dialogue
+  m_Name: New In Town
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 5567692609117940104}
