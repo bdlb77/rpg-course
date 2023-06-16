@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,27 +9,31 @@ namespace RPG.Dialogue
     {
         // TODO: replace with functgion Call when clicking on AI
         [SerializeField] Dialogue currentDialogue;
+        DialogueNode currentNode = null;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
+        private void Awake() {
+            currentNode = currentDialogue.GetRootNode();
         }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
         public string GetText()
         {
-            if (currentDialogue == null)
+            if (currentNode == null)
             {
                 return "";
             }
 
-            return currentDialogue.GetRootNode().Text;
+            return currentNode.Text;
+        }
+        
+        public void Next()
+        {
+            DialogueNode[] children = currentDialogue.GetAllChildren(currentNode).ToArray();
+            int randomIndex = Random.Range(0, children.Count());
+            currentNode =  children[randomIndex];
+        }
+
+        public bool HasNext()
+        {
+            return currentDialogue.GetAllChildren(currentNode).Count() > 0;
         }
     }
 

@@ -662,7 +662,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -240}
-  m_SizeDelta: {x: -540, y: 100}
+  m_SizeDelta: {x: -540, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3393641793116770399
 CanvasRenderer:
@@ -755,6 +755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AIText: {fileID: 2768987152878230230}
+  nextButton: {fileID: 8050150071577688971}
 --- !u!1 &9157728880465786427
 GameObject:
   m_ObjectHideFlags: 0
