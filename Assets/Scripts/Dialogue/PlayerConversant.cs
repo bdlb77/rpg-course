@@ -29,6 +29,13 @@ namespace RPG.Dialogue
             onConversationUpdated();
         }
 
+        public void Quit()
+        {
+            currentDialogue = null;
+            currentNode = null;
+            isChoosing = false;
+            onConversationUpdated();
+        }
         public bool IsDialogueOpen()
         {
             return currentDialogue != null;
@@ -39,6 +46,7 @@ namespace RPG.Dialogue
         {
             return isChoosing;
         }
+
         public string GetText()
         {
             if (currentNode == null)

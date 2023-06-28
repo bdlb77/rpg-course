@@ -17,12 +17,14 @@ namespace RPG.UI
         [SerializeField] GameObject AIResponse;
         [SerializeField] Transform choiceRoot;
         [SerializeField] GameObject choicePrefab;
+        [SerializeField] Button quitButton;
 
         void Start()
         {
             playerConversant = GameObject.FindWithTag("Player").GetComponent<PlayerConversant>();
             playerConversant.onConversationUpdated += UpdateUI;
             nextButton.onClick.AddListener(Next);
+            quitButton.onClick.AddListener(() => playerConversant.Quit());
             // initialize UI w/ starting Text...
             UpdateUI();
         }
@@ -34,11 +36,11 @@ namespace RPG.UI
 
         void UpdateUI()
         {
+            gameObject.SetActive(playerConversant.IsDialogueOpen());
             if (!playerConversant.IsDialogueOpen())
             {
                 return;
             }
-            print("HEREEE3");
 
             AIResponse.SetActive(!playerConversant.IsChoosing());
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
