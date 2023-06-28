@@ -35,6 +35,16 @@ namespace RPG.Dialogue
         {
             return currentDialogue.GetPlayerChildren(currentNode);
         }
+
+        public void SelectChoice(DialogueNode chosenNode)
+        {
+            currentNode = chosenNode;
+            isChoosing = false;
+            // comment out Next(), will read out text of chosen answer before moving onto the next node.
+            // If Next() is active, then it will go straight to next node.
+            Next();
+        }
+        
         public void Next()
         {
             int numPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
