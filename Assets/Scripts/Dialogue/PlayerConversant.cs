@@ -2,18 +2,36 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace RPG.Dialogue
 {
     public class PlayerConversant : MonoBehaviour
     {
+        public event Action onConversationUpdated;
+        [SerializeField] Dialogue testDialogue;
+
         // TODO: replace with functgion Call when clicking on AI
-        [SerializeField] Dialogue currentDialogue;
+        Dialogue currentDialogue;
         DialogueNode currentNode = null;
         private bool isChoosing = false;
 
-        private void Awake() {
+        IEnumerator Start()
+        {
+            yield return new WaitForSeconds(2);
+            StartDialogue(testDialogue);
+        }   
+
+        public void StartDialogue(Dialogue newDialogue)
+        {
+            currentDialogue = newDialogue;
             currentNode = currentDialogue.GetRootNode();
+            onConversationUpdated();
+        }
+
+        public bool IsDialogueOpen()
+        {
+            return currentDialogue != null;
         }
 
         // show choices or show AI response.
@@ -51,11 +69,13 @@ namespace RPG.Dialogue
             if (numPlayerResponses > 0)
             {
                 isChoosing = true;
+                onConversationUpdated();
                 return;
             }
             DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
-            int randomIndex = Random.Range(0, children.Count());
+            int randomIndex = UnityEngine.Random.Range(0, children.Count());
             currentNode =  children[randomIndex];
+            onConversationUpdated();
         }
 
         public bool HasNext()
