@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7936946093190582266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
+  m_Name: 68955df9-568b-451b-9397-6932898b1390
+  m_EditorClassIdentifier: 
+  text: 'You Liar! '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1367
+    y: 304
+    width: 200
+    height: 100
+  isPlayerSpeaking: 0
+  onExitAction: Attack
+  onEnterAction: 
 --- !u!114 &-7235359208417910432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22,6 +45,8 @@ MonoBehaviour:
     width: 200
     height: 100
   isPlayerSpeaking: 1
+  onExitAction: 
+  onEnterAction: 
 --- !u!114 &-6898006140696032073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,6 +69,8 @@ MonoBehaviour:
     width: 200
     height: 100
   isPlayerSpeaking: 1
+  onExitAction: 
+  onEnterAction: 
 --- !u!114 &-6197456772186473214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,10 +89,12 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 475
-    y: 18
+    y: 17
     width: 200
     height: 100
   isPlayerSpeaking: 1
+  onExitAction: 
+  onEnterAction: 
 --- !u!114 &-5806217597180027838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +117,8 @@ MonoBehaviour:
     width: 200
     height: 100
   isPlayerSpeaking: 0
+  onExitAction: TestOnExit
+  onEnterAction: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +140,7 @@ MonoBehaviour:
   - {fileID: 1792679641490765935}
   - {fileID: 4212616352856986700}
   - {fileID: 648712033844377270}
+  - {fileID: -7936946093190582266}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &648712033844377270
 MonoBehaviour:
@@ -122,16 +154,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
   m_Name: 7dd1e8ca-621f-4a4e-a35a-348b010d98de
   m_EditorClassIdentifier: 
-  text: Who?
+  text: Ah yes... Of Course...
   children:
-  - f77f07bf-0e09-4f9e-a79a-6415fc9d493c
+  - 68955df9-568b-451b-9397-6932898b1390
   rect:
     serializedVersion: 2
-    x: 1074
-    y: 375
+    x: 1087
+    y: 302
     width: 200
     height: 100
   isPlayerSpeaking: 1
+  onExitAction: 
+  onEnterAction: 
 --- !u!114 &1792679641490765935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +187,8 @@ MonoBehaviour:
     width: 200
     height: 100
   isPlayerSpeaking: 0
+  onExitAction: 
+  onEnterAction: 
 --- !u!114 &4212616352856986700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +211,8 @@ MonoBehaviour:
     width: 200
     height: 100
   isPlayerSpeaking: 0
+  onExitAction: 
+  onEnterAction: 
 --- !u!114 &5567692609117940104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,3 +236,5 @@ MonoBehaviour:
     width: 200
     height: 100
   isPlayerSpeaking: 0
+  onExitAction: 
+  onEnterAction: 

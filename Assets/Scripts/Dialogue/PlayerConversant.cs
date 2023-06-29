@@ -10,13 +10,14 @@ namespace RPG.Dialogue
     {
         public event Action onConversationUpdated;
 
-        // TODO: replace with functgion Call when clicking on AI
+        AIConversant currentConversant;        
         Dialogue currentDialogue;
         DialogueNode currentNode = null;
         private bool isChoosing = false;
 
-        public void StartDialogue(Dialogue newDialogue)
+        public void StartDialogue(AIConversant newConversant, Dialogue newDialogue)
         {
+            currentConversant = newConversant;
             currentDialogue = newDialogue;
             currentNode = currentDialogue.GetRootNode();
             TriggerEnterAction();
@@ -27,6 +28,7 @@ namespace RPG.Dialogue
         {
             currentDialogue = null;
             TriggerExitAction();
+            currentConversant = null;
             currentNode = null;
             isChoosing = false;
             onConversationUpdated();
@@ -92,18 +94,31 @@ namespace RPG.Dialogue
 
         private void TriggerEnterAction()
         {
-            if (currentNode != null && currentNode.OnEnterAction != "")
+            if (currentNode != null)
             {
-                Debug.Log(currentNode.OnEnterAction);
+                TriggerAction(currentNode.OnEnterAction);
             }
         }
+
         private void TriggerExitAction()
         {
-            if (currentNode != null && currentNode.OnExitAction != "")
+            if (currentNode != null)
             {
-                Debug.Log(currentNode.OnExitAction);
+                TriggerAction(currentNode.OnExitAction);
             }
         }
+
+        private void TriggerAction(string action)
+        {
+            if (action == "") return;
+
+            foreach (DialogueTrigger trigger in currentConversant.GetComponents<DialogueTrigger>())
+            {
+                trigger.Trigger(action);
+            }
+
+        }
+
     }
 
 }
