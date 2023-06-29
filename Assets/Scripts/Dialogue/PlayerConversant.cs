@@ -19,12 +19,14 @@ namespace RPG.Dialogue
         {
             currentDialogue = newDialogue;
             currentNode = currentDialogue.GetRootNode();
+            TriggerEnterAction();
             onConversationUpdated();
         }
 
         public void Quit()
         {
             currentDialogue = null;
+            TriggerExitAction();
             currentNode = null;
             isChoosing = false;
             onConversationUpdated();
@@ -58,6 +60,7 @@ namespace RPG.Dialogue
         public void SelectChoice(DialogueNode chosenNode)
         {
             currentNode = chosenNode;
+            TriggerEnterAction();
             isChoosing = false;
             // comment out Next(), will read out text of chosen answer before moving onto the next node.
             // If Next() is active, then it will go straight to next node.
@@ -70,18 +73,36 @@ namespace RPG.Dialogue
             if (numPlayerResponses > 0)
             {
                 isChoosing = true;
+                TriggerExitAction();
                 onConversationUpdated();
                 return;
             }
             DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
             int randomIndex = UnityEngine.Random.Range(0, children.Count());
+            TriggerExitAction();
             currentNode =  children[randomIndex];
+            TriggerEnterAction();
             onConversationUpdated();
         }
 
         public bool HasNext()
         {
             return currentDialogue.GetAllChildren(currentNode).Count() > 0;
+        }
+
+        private void TriggerEnterAction()
+        {
+            if (currentNode != null && currentNode.OnEnterAction != "")
+            {
+                Debug.Log(currentNode.OnEnterAction);
+            }
+        }
+        private void TriggerExitAction()
+        {
+            if (currentNode != null && currentNode.OnExitAction != "")
+            {
+                Debug.Log(currentNode.OnExitAction);
+            }
         }
     }
 

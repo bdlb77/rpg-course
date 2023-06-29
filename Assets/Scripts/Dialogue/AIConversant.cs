@@ -18,6 +18,7 @@ public class AIConversant : MonoBehaviour, IRaycastable
         {
             return false;
         }
+        
         if (Input.GetMouseButtonDown(0))
         {
             callingController.GetComponent<PlayerConversant>().StartDialogue(dialogue);
