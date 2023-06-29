@@ -9,18 +9,11 @@ namespace RPG.Dialogue
     public class PlayerConversant : MonoBehaviour
     {
         public event Action onConversationUpdated;
-        [SerializeField] Dialogue testDialogue;
 
         // TODO: replace with functgion Call when clicking on AI
         Dialogue currentDialogue;
         DialogueNode currentNode = null;
         private bool isChoosing = false;
-
-        IEnumerator Start()
-        {
-            yield return new WaitForSeconds(2);
-            StartDialogue(testDialogue);
-        }   
 
         public void StartDialogue(Dialogue newDialogue)
         {
