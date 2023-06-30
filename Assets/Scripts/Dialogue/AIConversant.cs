@@ -7,6 +7,9 @@ using UnityEngine;
 public class AIConversant : MonoBehaviour, IRaycastable
 {
     [SerializeField] Dialogue dialogue = null;
+    [SerializeField] string conversantName;
+
+    public string ConversantName { get { return conversantName; }}
     public CursorType GetCursorType()
     {
         return CursorType.Dialogue;

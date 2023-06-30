@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e639acfccf934488584fc5cc00e942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testDialogue: {fileID: 11400000, guid: f81933ec1e754344691f66d5052e81dc, type: 2}
+  playerName: Stevie Mcloed
 --- !u!114 &2058002289873760819
 MonoBehaviour:
   m_ObjectHideFlags: 0
