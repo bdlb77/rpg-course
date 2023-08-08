@@ -9,12 +9,17 @@ namespace RPG.Quests
     {
         [SerializeField] string[] objectives;
 
-        public string Text { get { return name; } }
+        public string Title { get { return name; } }
 
         public int GetObjectCount()
         {
             return objectives.Length;
         } 
+
+        public IEnumerable<string> GetObjectives()
+        {
+            return objectives;
+        }
     }
 
 }

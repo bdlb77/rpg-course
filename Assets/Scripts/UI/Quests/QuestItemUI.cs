@@ -11,12 +11,20 @@ namespace RPG.UI.Quests
         // Start is called before the first frame update
         [SerializeField] TextMeshProUGUI title;
         [SerializeField] TextMeshProUGUI progress;
-
+        
+        Quest quest;
         public void Setup(Quest quest)
         {
-            title.text = quest.Text;
+            this.quest = quest;
+            title.text = quest.Title;
             progress.text = "0/" + quest.GetObjectCount();
         }
+
+        public Quest GetQuest()
+        {
+            return this.quest;
+        }
+        
     }
 
 }
