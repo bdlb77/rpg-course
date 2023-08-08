@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e70c7b04db8cf478dbd9453df52385, type: 3}
   m_Name: Find the Missing Sock
   m_EditorClassIdentifier: 
-  objectives: []
+  objectives:
+  - Check the Bedroom
+  - Check the Laundry
+  - Check in the kitchen
