@@ -20,15 +20,13 @@ namespace RPG.UI.Quests
 
             foreach(var objective in quest.GetObjectives())
             {
-                GameObject objectiveInstance;
+                var usedPrefab = objectIncompletePrefab;
                 if (status.IsObjectiveComplete(objective))
                 {
-                    objectiveInstance = Instantiate(objectivePrefab, objectiveContainer);
+                    usedPrefab = objectivePrefab;
                 }
-                else
-                {
-                    objectiveInstance = Instantiate(objectIncompletePrefab, objectiveContainer);
-                }
+                 
+                GameObject objectiveInstance = Instantiate(usedPrefab, objectiveContainer);
                 TextMeshProUGUI objectiveText = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
 
 
