@@ -11,15 +11,27 @@ namespace RPG.UI.Quests
         [SerializeField] TextMeshProUGUI title;
         [SerializeField] Transform objectiveContainer;
         [SerializeField] GameObject objectivePrefab;
-        public void Setup(Quest quest)
+        [SerializeField] GameObject objectIncompletePrefab;
+        public void Setup(QuestStatus status)
         {
+            var quest = status.Quest;
             title.text = quest.Title;
             objectiveContainer.DetachChildren();
 
             foreach(var objective in quest.GetObjectives())
             {
-                GameObject objectiveInstance = Instantiate(objectivePrefab,objectiveContainer);
+                GameObject objectiveInstance;
+                if (status.IsObjectiveComplete(objective))
+                {
+                    objectiveInstance = Instantiate(objectivePrefab, objectiveContainer);
+                }
+                else
+                {
+                    objectiveInstance = Instantiate(objectIncompletePrefab, objectiveContainer);
+                }
                 TextMeshProUGUI objectiveText = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
+
+
                 objectiveText.text = objective;
 
             }

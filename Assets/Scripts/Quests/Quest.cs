@@ -11,7 +11,7 @@ namespace RPG.Quests
 
         public string Title { get { return name; } }
 
-        public int GetObjectCount()
+        public int GetObjectiveCount()
         {
             return objectives.Length;
         } 

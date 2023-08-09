@@ -335,6 +335,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Stevie Mcloed
+--- !u!114 &895851942522870035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222817470319013488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6810422a454944b46921b1ed7f995dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statuses:
+  - quest: {fileID: 11400000, guid: ccabbebabccbc1743a89ba4649eff72e, type: 2}
+    completedObjectives:
+    - Check the bedroom
+    - Check the Laundry
+  - quest: {fileID: 11400000, guid: 3bc27beb902d9e941ae491c5a7d7e417, type: 2}
+    completedObjectives:
+    - Identify the bunion
 --- !u!114 &2058002289873760819
 MonoBehaviour:
   m_ObjectHideFlags: 0
