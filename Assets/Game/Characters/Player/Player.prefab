@@ -350,7 +350,7 @@ MonoBehaviour:
   statuses:
   - quest: {fileID: 11400000, guid: ccabbebabccbc1743a89ba4649eff72e, type: 2}
     completedObjectives:
-    - Check the bedroom
+    - Check the Bedroom
     - Check the Laundry
   - quest: {fileID: 11400000, guid: 3bc27beb902d9e941ae491c5a7d7e417, type: 2}
     completedObjectives:
