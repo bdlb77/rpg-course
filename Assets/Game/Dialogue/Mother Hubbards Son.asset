@@ -269,8 +269,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 657
-    y: 154
+    x: 630
+    y: 153
     width: 200
     height: 100
   isPlayerSpeaking: 0
