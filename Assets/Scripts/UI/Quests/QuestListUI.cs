@@ -19,7 +19,10 @@ namespace RPG.UI.Quests
 
         private void Redraw()
         {
-            transform.DetachChildren();
+            foreach (Transform item in transform)
+            {
+                Destroy(item.gameObject);
+            }
             foreach (var status in questList.GetStatuses())
             {
                 var uiInstance = Instantiate<QuestItemUI>(questPrefab, transform);
