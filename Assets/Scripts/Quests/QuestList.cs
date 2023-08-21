@@ -32,10 +32,10 @@ namespace RPG.Quests
             return questStatus != null;
         }
 
-        public void CompleteObjective(Quest quest, string objective)
+        public void CompleteObjective(Quest quest, string objectiveRef)
         {
             var questStatus = GetQuestStatus(quest);
-            questStatus.CompleteObjective(objective);
+            questStatus.CompleteObjective(objectiveRef);
             OnUpdate?.Invoke();
 
         }

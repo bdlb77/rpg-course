@@ -21,7 +21,7 @@ namespace RPG.UI.Quests
             foreach(var objective in quest.GetObjectives())
             {
                 var usedPrefab = objectIncompletePrefab;
-                if (status.IsObjectiveComplete(objective))
+                if (status.IsObjectiveComplete(objective.reference))
                 {
                     usedPrefab = objectivePrefab;
                 }
@@ -30,7 +30,7 @@ namespace RPG.UI.Quests
                 TextMeshProUGUI objectiveText = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
 
 
-                objectiveText.text = objective;
+                objectiveText.text = objective.description;
 
             }
         }
