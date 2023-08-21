@@ -8921,7 +8921,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: f81933ec1e754344691f66d5052e81dc, type: 2}
   conversantName: Suspicious Guard
---- !u!114 &1169007608
+--- !u!114 &1169007615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1883219833532263265, guid: 1feb3ef4bea8115428557fc2d4306933, type: 3}
+  m_PrefabInstance: {fileID: 413338538}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169007605}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54700c88c56c6384a8bd1fb2f20c1fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1169007623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8936,18 +8947,19 @@ MonoBehaviour:
   action: TestObjective
   onTrigger:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1169007615 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1883219833532263265, guid: 1feb3ef4bea8115428557fc2d4306933, type: 3}
-  m_PrefabInstance: {fileID: 413338538}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169007605}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54700c88c56c6384a8bd1fb2f20c1fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+      m_Calls:
+      - m_Target: {fileID: 2032094586}
+        m_TargetAssemblyTypeName: RPG.Quests.QuestCompletion, Assembly-CSharp
+        m_MethodName: CompleteObjective
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1173688038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14926,6 +14938,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2032094584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4605504907609044304, guid: 1feb3ef4bea8115428557fc2d4306933, type: 3}
+  m_PrefabInstance: {fileID: 413338538}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2032094586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032094584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede752d47a279924c874c57434409125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 3bc27beb902d9e941ae491c5a7d7e417, type: 2}
+  objective: Identify the bunion
 --- !u!1001 &2033655723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17826,7 +17857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3912464630758444881, guid: a3d181620330ada44ae0d9c3f6b658e4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -522.7202
+      value: -466.70325
       objectReference: {fileID: 0}
     - target: {fileID: 3928855744694564049, guid: a3d181620330ada44ae0d9c3f6b658e4, type: 3}
       propertyPath: m_AnchorMax.y

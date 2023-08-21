@@ -26,6 +26,19 @@ namespace RPG.Quests
         {
             return objectives.Contains(objective);
         }
+
+        public static Quest GetByName(string questName)
+        {
+            // quest scriptableObjs (SO's) need to be under Resources/ folder
+            foreach(Quest quest in Resources.LoadAll<Quest>(""))
+            {
+                if (quest.name == questName)
+                {
+                    return quest;
+                }
+            }
+            return null;
+        }
     }
 
 }
