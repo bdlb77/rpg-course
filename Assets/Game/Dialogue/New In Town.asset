@@ -187,7 +187,7 @@ MonoBehaviour:
     width: 200
     height: 100
   isPlayerSpeaking: 0
-  onExitAction: TestObjective
+  onExitAction: MakeSuspicious
   onEnterAction: 
 --- !u!114 &4212616352856986700
 MonoBehaviour:

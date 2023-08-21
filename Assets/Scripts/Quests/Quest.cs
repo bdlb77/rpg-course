@@ -20,7 +20,7 @@ namespace RPG.Quests
             public string description;
         }
         [System.Serializable]
-        class Reward
+        public class Reward
         {
             public int number;
             public InventoryItem item;
@@ -37,6 +37,10 @@ namespace RPG.Quests
             return objectives;
         }
 
+        public IEnumerable<Reward> GetRewards()
+        {
+            return rewards;
+        }
         public bool HasObjective(string objRef)
         {
             foreach (Objective objective in objectives)

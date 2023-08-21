@@ -8944,7 +8944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e7dc52b94e6d9439037f4ec74a46af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: TestObjective
+  action: MakeSuspicious
   onTrigger:
     m_PersistentCalls:
       m_Calls:
@@ -14956,7 +14956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: 3bc27beb902d9e941ae491c5a7d7e417, type: 2}
-  objective: Identify the bunion
+  objective: 
 --- !u!1001 &2033655723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17857,7 +17857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3912464630758444881, guid: a3d181620330ada44ae0d9c3f6b658e4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -466.70325
+      value: -522.7203
       objectReference: {fileID: 0}
     - target: {fileID: 3928855744694564049, guid: a3d181620330ada44ae0d9c3f6b658e4, type: 3}
       propertyPath: m_AnchorMax.y

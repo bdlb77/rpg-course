@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: Mother hubbards bunions
   m_EditorClassIdentifier: 
   objectives:
-  - Identify the bunion
-  - purchase ointment for bunion
-  - deliver ointment to mother
+  - reference: 1
+    description: Make Guard Suspicious
+  - reference: 2
+    description: Find Ointment.
+  - reference: 3
+    description: Deliver Ointment
+  rewards:
+  - number: 1
+    item: {fileID: 11400000, guid: a9fabb2b052f63340a73d9139644d5b2, type: 2}
