@@ -9,13 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f20eb1792e8048a46bf5c7c520a3ea3b, type: 3}
-  m_Name: Hat
+  m_Script: {fileID: 11500000, guid: 0d64c7f44056e5343aa21f9fd52f4d35, type: 3}
+  m_Name: Foot Cream
   m_EditorClassIdentifier: 
-  itemID: 5e9bb4b1-368d-4829-9f04-55035d06f1c1
-  displayName: Hat
-  description: 
-  icon: {fileID: 21300000, guid: c1b61b3a91732a747a8496fc75a13fe2, type: 3}
+  itemID: 7db404b1-36e5-480b-8747-6bdee7fd49bb
+  displayName: Foot Cream
+  description: The wonderful ointment for the nasty toez
+  icon: {fileID: 21300000, guid: f1dd815974b2d4240a6bc912d6585497, type: 3}
   pickup: {fileID: 7792474443150033459, guid: 4c26bdaf9bfcabf40853e2c04e3105f2, type: 3}
   stackable: 0
-  allowedEquipLocation: 0
+  allowedEquipLocation: 5
+  additiveModifiers: []
+  percentageModifiers: []

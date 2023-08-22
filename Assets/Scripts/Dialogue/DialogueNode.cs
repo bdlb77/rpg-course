@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using System;
+using RPG.Core;
 
 namespace RPG.Dialogue
 {
@@ -18,6 +19,8 @@ namespace RPG.Dialogue
         [SerializeField] string onExitAction;
         [SerializeField] string onEnterAction;
 
+        [SerializeField] Condition condition;
+
         public Rect GetRect { get { return rect; } }
         public string Text { get { return text; } }
         public List<string> Children { get { return children; } }
@@ -25,6 +28,11 @@ namespace RPG.Dialogue
         public string OnEnterAction { get { return onEnterAction; }}
         public string OnExitAction { get { return onExitAction; }}
         
+        public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
+        {
+            return condition.Check(evaluators);
+        }
+
 #if UNITY_EDITOR
         public void SetPosition(Vector2 newPosition)
         {
@@ -71,6 +79,7 @@ namespace RPG.Dialogue
             EditorUtility.SetDirty(this);
 
         }
+
     }
 #endif
 }

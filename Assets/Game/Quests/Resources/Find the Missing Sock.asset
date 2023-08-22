@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Find the Missing Sock
   m_EditorClassIdentifier: 
   objectives:
-  - Check the Bedroom
-  - Check the Laundry
-  - Check in the kitchen
+  - reference: 324
+    description: Working With Others.
+  rewards: []

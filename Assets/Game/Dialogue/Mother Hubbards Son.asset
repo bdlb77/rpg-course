@@ -23,6 +23,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-9047064154605244410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,6 +48,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-9045430449750039546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +73,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-9029230406190216491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,6 +98,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-8890269977696696968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +123,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-8843157522515013721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +148,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-8562981813847694957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +173,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-8405930408381291705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +198,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-8209099092670094967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +223,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7871602260787665040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +248,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7865670478677276910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +273,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7853436692383740441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,13 +291,15 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 630
-    y: 153
+    x: 651
+    y: 137
     width: 200
     height: 100
   isPlayerSpeaking: 0
   onExitAction: GiveQuest
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7843982080418595971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +323,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7828558678752031524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +348,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7766994928561545870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +373,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7738654566322345237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +398,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7737360979725030354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +423,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7608851843440974620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,6 +448,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7535590584135175973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,6 +473,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7350294222359533685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,6 +498,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7343188716629329649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,6 +523,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7341750994058562426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,6 +548,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7161672125920578244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +573,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7094583983139284142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,6 +598,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7087633665519176935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,6 +623,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7059767095514758543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,6 +648,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7055382277148448252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,6 +673,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7048318038543864554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,6 +698,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7001061556102220884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,6 +723,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6964380543480406510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,6 +748,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6961935307200507838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,6 +773,44 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
+--- !u!114 &-6956208730013871320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
+  m_Name: 75f73d1c-6e51-433c-8eba-9a685fba99a1
+  m_EditorClassIdentifier: 
+  text: I'm already on the case.
+  children:
+  - 6590fe75-4d6b-495e-b6be-1c3191d47535
+  rect:
+    serializedVersion: 2
+    x: 415
+    y: 260
+    width: 200
+    height: 100
+  isPlayerSpeaking: 1
+  onExitAction: 
+  onEnterAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Mother hubbards bunions
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Mother hubbards bunions
+        negate: 1
 --- !u!114 &-6812859057882181982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,6 +834,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6774996735598126870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,6 +859,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6674476396953754436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,6 +884,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6625898248632301154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,6 +909,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6595250838695018527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,6 +934,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6540445466978293572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,6 +959,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6454916148966810128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,6 +984,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6402565549571528694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,6 +1009,33 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
+--- !u!114 &-6319278288704310760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
+  m_Name: 384732f4-dcaa-44ec-b08f-9fb826c5fc3d
+  m_EditorClassIdentifier: 
+  text: That Doesn't concern Me.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 415
+    y: 32
+    width: 200
+    height: 100
+  isPlayerSpeaking: 1
+  onExitAction: 
+  onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6099524178413350373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,6 +1059,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6016713027335431617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,6 +1084,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5946807403657963913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,6 +1109,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5825155143988872603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -989,6 +1134,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5751122067306973329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,6 +1159,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5742857806990684102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,6 +1184,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5722130577049840375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1058,6 +1209,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5673439296175462195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,6 +1234,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5640086664592816525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1104,6 +1259,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5620449277076595064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,6 +1284,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5586005468958000350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1150,6 +1309,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5570803597992710347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1173,6 +1334,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5436861053368746654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,6 +1359,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5336998973080107872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,6 +1384,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5240636151631535374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,6 +1409,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5068298153356615864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1265,6 +1434,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5056826984607368248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1288,6 +1459,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5051865972801262657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,6 +1484,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4997315188313288166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1334,6 +1509,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4899777708520641132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1357,6 +1534,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4734906450623649910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1380,6 +1559,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4677935142468979191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1403,6 +1584,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4637584652495143546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1426,6 +1609,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4607337727174216283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1449,6 +1634,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4606933789283636800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1472,6 +1659,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4438954855687946911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1495,6 +1684,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4412598521266431592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,17 +1700,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: My mother has an issue with her feet.. Could you perhaps assist me?
   children:
-  - 680ddd3c-abb7-46ab-a3ba-cd4026e91962
   - 4eee40e6-2b5f-4ddc-b515-aeb27114f98d
+  - 75f73d1c-6e51-433c-8eba-9a685fba99a1
+  - 384732f4-dcaa-44ec-b08f-9fb826c5fc3d
+  - 7e3cecb5-e93c-4144-8db8-319a9e161c3c
   rect:
     serializedVersion: 2
-    x: 165
-    y: 45
+    x: 109
+    y: 72
     width: 200
     height: 100
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4372953256281641380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1543,6 +1738,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4367847044662841541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1566,6 +1763,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4362931897725358133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1589,6 +1788,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4326382875685973951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1612,6 +1813,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4305337015061212765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1635,6 +1838,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4304295166070728027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1658,6 +1863,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4297694046680722696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1681,6 +1888,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4265590297876163459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,6 +1913,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4180194191359446558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1727,6 +1938,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4159353598175556334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1750,6 +1963,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-4064978309531260138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1773,6 +1988,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3999080410528753353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1796,6 +2013,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3997558646741648013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1819,6 +2038,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3862158175789289113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1842,6 +2063,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3831469737743933382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1865,6 +2088,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3824253701606757547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1888,6 +2113,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3737382421305384119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1911,6 +2138,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3581557049071359242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1934,6 +2163,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3559056298346294869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1957,6 +2188,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3456460856163966605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1980,6 +2213,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3411919860851101819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2003,6 +2238,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3411470139983606627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2026,6 +2263,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3347738612933673981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2049,6 +2288,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3275046767244739846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2072,6 +2313,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3172612467916047193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2095,6 +2338,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3169777617463443294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2118,6 +2363,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-3010890160683871814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2141,6 +2388,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-2854972478205796546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2164,29 +2413,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
---- !u!114 &-2718180097350467919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
-  m_Name: 680ddd3c-abb7-46ab-a3ba-cd4026e91962
-  m_EditorClassIdentifier: 
-  text: That doesn't conern Me.
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 415
-    y: 44
-    width: 200
-    height: 100
-  isPlayerSpeaking: 1
-  onExitAction: 
-  onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-2712773432363973207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2210,6 +2438,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-2689487546115515539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2233,6 +2463,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-2576198674599443703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2256,6 +2488,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-2496427745469912421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2279,6 +2513,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-2362845090703260912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2302,6 +2538,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-2303001014824149651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2325,6 +2563,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-2199798453787026853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2348,6 +2588,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-2188553235447750574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2371,6 +2613,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-1931820406161747273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2394,6 +2638,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-1719178114650626176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2417,6 +2663,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-1505583598049849334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2440,6 +2688,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-1351815820773762836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2463,6 +2713,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-1320013132934352762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2486,6 +2738,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-1304092310494927671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2509,6 +2763,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-1146582375113908897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2532,6 +2788,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-974473858490759571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2555,6 +2813,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-408408215171534873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2578,6 +2838,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-331439250489515711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2601,6 +2863,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-268849481192528747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2624,6 +2888,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-189563476165498567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2647,6 +2913,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-61025512235737937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2670,6 +2938,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-39777747071221417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2693,6 +2963,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2707,9 +2979,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -4412598521266431592}
-  - {fileID: -2718180097350467919}
   - {fileID: 7347102289555624588}
   - {fileID: -7853436692383740441}
+  - {fileID: -6956208730013871320}
+  - {fileID: 1812107369372514068}
+  - {fileID: -6319278288704310760}
+  - {fileID: 4143928201458930603}
+  - {fileID: 8961122213722589557}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &164884811300182962
 MonoBehaviour:
@@ -2734,6 +3010,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &217240677692174804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2757,6 +3035,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &256493767360091016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2780,6 +3060,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &288988658837257428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2803,6 +3085,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &447258990922246008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2826,6 +3110,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &521214655579564954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2849,6 +3135,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &584432918647355957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2872,6 +3160,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &695209226095099370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2895,6 +3185,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &711623288567430957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2918,6 +3210,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &760106193997083347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2941,6 +3235,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &791707255206375528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2964,6 +3260,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &837064992596891178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2987,6 +3285,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &922176537933638683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3010,6 +3310,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1196974675244712238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3033,6 +3335,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1247828788235286610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3056,6 +3360,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1257086037012457112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3079,6 +3385,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1302774051993146453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3102,6 +3410,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1413751464307870388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3125,6 +3435,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1532043661282904687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3148,6 +3460,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1654717544390348938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3171,6 +3485,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1677742027994182524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3194,6 +3510,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1693717680032708594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3217,6 +3535,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1713856334279742119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3240,6 +3560,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1715312956275638875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3263,6 +3585,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1725737317762725792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3286,6 +3610,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1764784130076126880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3309,6 +3635,33 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
+--- !u!114 &1812107369372514068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
+  m_Name: 6590fe75-4d6b-495e-b6be-1c3191d47535
+  m_EditorClassIdentifier: 
+  text: Oh! That's right.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 664
+    y: 252
+    width: 200
+    height: 100
+  isPlayerSpeaking: 0
+  onExitAction: 
+  onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1871990361480900942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3332,6 +3685,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1877027256511641533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3355,6 +3710,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1888319469772509766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3378,6 +3735,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2063803809414464789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3401,6 +3760,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2159928494465651570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3424,6 +3785,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2206653137405560542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3447,6 +3810,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2217996104639704974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3470,6 +3835,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2227022022714674838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3493,6 +3860,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2395177373614042428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3516,6 +3885,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2409713146246738960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3539,6 +3910,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2443529257926102362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3562,6 +3935,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2600228993808350795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3585,6 +3960,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2654036235931989166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3608,6 +3985,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2855651935307840129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3631,6 +4010,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2915634425702971775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3654,6 +4035,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &2948949944307934280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3677,6 +4060,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &3103715669147854746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3700,6 +4085,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &3231329092417128244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3723,6 +4110,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &3851301217763952362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3746,6 +4135,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &3914024483422159346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3769,6 +4160,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &3945724772255744591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3792,6 +4185,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &3979677355406709028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3815,6 +4210,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &4060772076618073337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3838,6 +4235,48 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
+--- !u!114 &4143928201458930603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
+  m_Name: 7e3cecb5-e93c-4144-8db8-319a9e161c3c
+  m_EditorClassIdentifier: 
+  text: I have the special cream!
+  children:
+  - 11dd3dc4-fc0a-444d-8282-bde48361eb21
+  rect:
+    serializedVersion: 2
+    x: 412
+    y: 353
+    width: 200
+    height: 100
+  isPlayerSpeaking: 1
+  onExitAction: 
+  onEnterAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Mother hubbards bunions
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Mother hubbards bunions
+        negate: 0
+      - predicate: HasInventoryItem
+        parameters:
+        - 7db404b1-36e5-480b-8747-6bdee7fd49bb
+        negate: 0
 --- !u!114 &4147696234434785056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3861,6 +4300,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &4327844408602576269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3884,6 +4325,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &4838601119632685124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3907,6 +4350,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &4956361595957633062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3930,6 +4375,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5055400972540880155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3953,6 +4400,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5100863886067216703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3976,6 +4425,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5208757845558112415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3999,6 +4450,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5277668162585346369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4022,6 +4475,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5374688031772599450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4045,6 +4500,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5479245743949183424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4068,6 +4525,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5511310882313122686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4091,6 +4550,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5634012502555866636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4114,6 +4575,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5733302033490810651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4137,6 +4600,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5741071380024993324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4160,6 +4625,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5761087638098729524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4183,6 +4650,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5943992689554332288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4206,6 +4675,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5962540210409506450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4229,6 +4700,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5999966699757795436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4252,6 +4725,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6009758303032226403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4275,6 +4750,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6080101325779515957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4298,6 +4775,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6090636876528940858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4321,6 +4800,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6090746087932476224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4344,6 +4825,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6157351999187074531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4367,6 +4850,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6224656231222921207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4390,6 +4875,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6299097840726664040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4413,6 +4900,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6358128966099353325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4436,6 +4925,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6428480993384957569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4459,6 +4950,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6601786517842507892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4482,6 +4975,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6727296059369903962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4505,6 +5000,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6851508128426112148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4528,6 +5025,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6886863549231556142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4551,6 +5050,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6934250403509447013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4574,6 +5075,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &6989678321208776822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4597,6 +5100,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &7089773717337463080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4620,6 +5125,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &7163954721212823960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4643,6 +5150,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &7165466050382740615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4666,6 +5175,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &7347102289555624588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4683,13 +5194,20 @@ MonoBehaviour:
   - c4855b36-c3fe-4371-b862-04b4b312dca3
   rect:
     serializedVersion: 2
-    x: 407
-    y: 154
+    x: 413
+    y: 142
     width: 200
     height: 100
   isPlayerSpeaking: 1
   onExitAction: 
   onEnterAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Mother hubbards bunions
+        negate: 1
 --- !u!114 &7505040534133264898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4713,6 +5231,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &7549370098131399092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4736,6 +5256,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &7563696908703566681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4759,6 +5281,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &7595851900394557941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4782,6 +5306,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &7622918968463696350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4805,6 +5331,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &7748721664225454036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4828,6 +5356,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &7819227560249180539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4851,6 +5381,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &8136994912678228494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4874,6 +5406,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &8199051396654515458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4897,6 +5431,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &8213932951878163049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4920,6 +5456,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &8248240985876500327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4943,6 +5481,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &8248548739940602457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4966,6 +5506,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &8344193964979583222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4989,6 +5531,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &8395163772695918092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5012,6 +5556,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &8509847823893990379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5035,6 +5581,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &8672625590150507127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5058,6 +5606,33 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
+--- !u!114 &8961122213722589557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
+  m_Name: 11dd3dc4-fc0a-444d-8282-bde48361eb21
+  m_EditorClassIdentifier: 
+  text: Wonderful Thank You!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 662
+    y: 353
+    width: 200
+    height: 100
+  isPlayerSpeaking: 0
+  onExitAction: 
+  onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &9042797453278546579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5081,6 +5656,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &9055150937671949770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5104,6 +5681,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &9208040566571278973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5127,3 +5706,5 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []

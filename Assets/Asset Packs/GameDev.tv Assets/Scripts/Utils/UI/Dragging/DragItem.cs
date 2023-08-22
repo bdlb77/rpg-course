@@ -67,7 +67,7 @@ namespace GameDevTV.Core.UI.Dragging
             {
                 container = GetContainer(eventData);
             }
-
+            
             if (container != null)
             {
                 DropItemIntoContainer(container);

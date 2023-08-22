@@ -3,11 +3,13 @@ using RPG.Attributes;
 using GameDevTV.Inventories;
 using RPG.Stats;
 using System.Collections.Generic;
+using RPG.Core;
+using System;
 
 namespace RPG.Combat
 {
     [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Make New Weapon", order = 0)]
-    public class WeaponConfig : EquipableItem, IModifierProvider
+    public class WeaponConfig : EquipableItem, IModifierProvider, IPredicateEvaluator
     {
         [SerializeField] AnimatorOverrideController animatorOverride = null;
         [SerializeField] Weapon equippedPrefab = null;
@@ -97,6 +99,19 @@ namespace RPG.Combat
             {
                 yield return weaponPercentageBonus;
             }
+        }
+
+        public bool? Evaluate(string predicate, string[] parameters)
+        {
+            if (predicate != "HasEquippedWeapon") return null;
+
+            return HasEquippedWeapon(parameters[0]);
+
+        }
+
+        private bool HasEquippedWeapon(string weaponName)
+        {
+            return equippedPrefab.name == weaponName;
         }
     }
 }

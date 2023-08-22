@@ -59,9 +59,9 @@ namespace RPG.UI
 
         private void BuildChoiceList()
         {
-            foreach (Transform choiceChild in choiceRoot)
+            foreach (Transform item in choiceRoot)
             {
-                Destroy(choiceChild.gameObject);
+                Destroy(item.gameObject);
             }
             foreach (DialogueNode choice in playerConversant.GetChoices())
             {

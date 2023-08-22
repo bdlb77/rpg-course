@@ -16,13 +16,40 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 1367
-    y: 304
+    x: 1216
+    y: 161
     width: 200
     height: 100
   isPlayerSpeaking: 0
   onExitAction: Attack
   onEnterAction: 
+  condition:
+    and: []
+--- !u!114 &-7600152145704709193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
+  m_Name: 818bdec7-365e-42d6-b0b2-e1010b36ba9e
+  m_EditorClassIdentifier: 
+  text: That''s... quite small.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 718
+    y: 244
+    width: 200
+    height: 100
+  isPlayerSpeaking: 0
+  onExitAction: 
+  onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-7235359208417910432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,6 +74,8 @@ MonoBehaviour:
   isPlayerSpeaking: 1
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6898006140696032073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,13 +93,15 @@ MonoBehaviour:
   - cabbe86f-7b0a-4839-9f6f-2314bffb18e8
   rect:
     serializedVersion: 2
-    x: 365
-    y: 199
+    x: 474
+    y: 130
     width: 200
     height: 100
   isPlayerSpeaking: 1
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-6197456772186473214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +126,8 @@ MonoBehaviour:
   isPlayerSpeaking: 1
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &-5806217597180027838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +152,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: TestOnExit
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +176,8 @@ MonoBehaviour:
   - {fileID: 4212616352856986700}
   - {fileID: 648712033844377270}
   - {fileID: -7936946093190582266}
+  - {fileID: 2818154930549027631}
+  - {fileID: -7600152145704709193}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &648712033844377270
 MonoBehaviour:
@@ -159,13 +196,15 @@ MonoBehaviour:
   - 68955df9-568b-451b-9397-6932898b1390
   rect:
     serializedVersion: 2
-    x: 1087
-    y: 302
+    x: 977
+    y: 127
     width: 200
     height: 100
   isPlayerSpeaking: 1
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &1792679641490765935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +228,34 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   onExitAction: MakeSuspicious
   onEnterAction: 
+  condition:
+    and: []
+--- !u!114 &2818154930549027631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2fc3b1afca5b246897d37edd2396b2, type: 3}
+  m_Name: c9dfac1f-ddf6-4265-bafe-736f92e8b41c
+  m_EditorClassIdentifier: 
+  text: Check out my sword.
+  children:
+  - 818bdec7-365e-42d6-b0b2-e1010b36ba9e
+  rect:
+    serializedVersion: 2
+    x: 467
+    y: 244
+    width: 200
+    height: 100
+  isPlayerSpeaking: 1
+  onExitAction: 
+  onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &4212616352856986700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,13 +273,15 @@ MonoBehaviour:
   - 7dd1e8ca-621f-4a4e-a35a-348b010d98de
   rect:
     serializedVersion: 2
-    x: 717
-    y: 269
+    x: 710
+    y: 130
     width: 200
     height: 100
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []
 --- !u!114 &5567692609117940104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,12 +298,15 @@ MonoBehaviour:
   children:
   - e1bc19b1-6951-46ef-8fa6-d3068afe4ade
   - 2252c79d-647f-4f9f-8a47-d9465f4f0cb7
+  - c9dfac1f-ddf6-4265-bafe-736f92e8b41c
   rect:
     serializedVersion: 2
-    x: 10
-    y: 73
+    x: 11
+    y: 75
     width: 200
     height: 100
   isPlayerSpeaking: 0
   onExitAction: 
   onEnterAction: 
+  condition:
+    and: []

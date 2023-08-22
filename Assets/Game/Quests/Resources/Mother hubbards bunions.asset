@@ -14,11 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectives:
   - reference: 1
-    description: Make Guard Suspicious
-  - reference: 2
-    description: Find Ointment.
-  - reference: 3
-    description: Deliver Ointment
+    description: Please acqure the foot cream for my poor old mum!
   rewards:
   - number: 1
-    item: {fileID: 11400000, guid: a9fabb2b052f63340a73d9139644d5b2, type: 2}
+    item: {fileID: 11400000, guid: 6ceae9150d99da34eae2e1a40d722849, type: 2}
